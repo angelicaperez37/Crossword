@@ -1,0 +1,6 @@
+
+ATTEMPT 0
+Solved: False
+Search time: 0:04:11.056696
+0 puzzles Solved.
+Accuracy: 0.0

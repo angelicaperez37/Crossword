@@ -1,0 +1,10 @@
+1) Basic Word-by-Word Search w/ One Level of Forward Checking
+	*) For each Word variable chooses first assignment that leads to non-empty neighbors' domains upon FC
+
+2) Letter-by-Letter Search w/ Basic Magnitude/NeighborAverage Scoring
+	*) Score = alpha*x + beta*y
+		x = total magnitude of neighbors' domains after FC
+		y = mean size of neighbors' domains after FC
+
+
+

@@ -1,0 +1,43 @@
+
+Models:
+	1) Model as CSP
+	2) Model as MDP
+
+Variable Ordering Algorithms:
+	1) Most Constrained Variable
+		-Must assign every variable
+		-If going to fail, fail early
+		-Useful when at least some factors are constraints
+	2) Least Constrained Variable
+		-Need to choose some value
+		-Choosing value most likely to lead to solution
+		-Useful when all factors are constraints
+
+Search Algorithms:
+	1) Backtracking Search:
+		Backtrack(x,w,Domains):
+			-If x is complete assignment, update best and return
+			-Choose unassigned VARIABLE X_i
+			-Order VALUES in Domain_i
+			-For each value v in that order:
+				gamma = PROD(f_j(x U {X_i = v})) //f_j = 1 if constraint satisfied
+				If gamma == 0: continue
+				Domains' = Propogate(Domains)
+				Backtrack(x U {X_i=v}, w*gamma,Domains')
+
+	2) Beam Search:
+		BeamSearch([x],[w],[Domains],K):
+			-For each assignment x_j
+				-For each var i = 1,...n:
+					[x_j'] = {x U {X_i=v} for x \in C for v \in Domain_i}
+			-Choose K partial assignments with highest weights and run Beam search on them
+
+	3) Supervised Learning Using Classification and Regression
+
+Classifiers/Predictors
+
+
+
+
+
+

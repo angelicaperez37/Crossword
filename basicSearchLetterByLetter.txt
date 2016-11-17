@@ -1,0 +1,143 @@
+ATTEMPT 0
+Solved: False
+Search time: 0:02:15.276074
+***E******ERRON**********ATTEMPT 0
+Solved: False
+Search time: 0:04:55.142244
+***E**A*E*INDEX*******E**ATTEMPT 0
+Solved: False
+Search time: 0:06:46.394135
+*ALIT*SE**ETHANRAR**ERSE*ATTEMPT 1
+Solved: False
+Search time: 0:06:09.534738
+*S**E*CAM*RHEMEO**I*SANE*ATTEMPT 2
+Solved: False
+Search time: 0:07:10.872582
+**APE*ALESADOPT*LES*SES**ATTEMPT 0
+Solved: False
+Search time: 0:00:00.029448
+*AMP**LUASLADYSDLI**SANE*ATTEMPT 1
+Solved: False
+Search time: 0:00:00.027888
+*TKO**EONSFLOODELKE*BAYS*ATTEMPT 2
+Solved: False
+Search time: 0:00:00.026030
+*ARED*PIGSILLGOSALE**YS**ATTEMPT 0
+Solved: False
+Search time: 0:00:00.013766
+**C****LOEIWEREFEMS*S*SE*ATTEMPT 1
+Solved: True
+Search time: 0:00:00.028203
+*RIPS*ACAROTERIACEE*THSE*ATTEMPT 2
+Solved: True
+Search time: 0:00:00.017684
+*SSTS*ELEAPEEPSTYPE*SATE*ATTEMPT 3
+Solved: False
+Search time: 0:00:00.029273
+*AC*E**AOSMOPUPAMER*LATS*ATTEMPT 4
+Solved: True
+Search time: 0:00:00.025860
+*GCAS*ROLECOYERMALT*ANYA*ATTEMPT 5
+Solved: False
+Search time: 0:00:00.023561
+*CC*I*ARI*CRONYDOC**SLI**ATTEMPT 6
+Solved: False
+Search time: 0:00:00.027796
+*TEAL*RFDSFIFEDSKIL*TEE**ATTEMPT 0
+Solved: False
+Search time: 0:00:00.021180
+*AD****OA*STORMOOZY*ONY**ATTEMPT 1
+Solved: False
+Search time: 0:00:00.018431
+*AD*S*DRA*BUDDYRERE**LE**ATTEMPT 2
+Solved: True
+Search time: 0:00:00.024993
+*ABES*FINEMOGENARRR*RESO*ATTEMPT 3
+Solved: True
+Search time: 0:00:00.025844
+*AFCA*CERTAUDENRRIS*MANS*ATTEMPT 4
+Solved: False
+Search time: 0:00:00.028730
+*SFPD*CEREJAMIEARME**PER*ATTEMPT 5
+Solved: False
+Search time: 0:00:00.033646
+**UGS**N*EPUPAS*EES*SSNS*ATTEMPT 6
+Solved: False
+Search time: 0:00:00.026646
+**KA***IREIRMASNAB****A**ATTEMPT 0
+Solved: False
+Search time: 0:00:00.023530
+*SH***MYRAGAPERAZER*TER**ATTEMPT 1
+Solved: False
+Search time: 0:00:00.020916
+*BBBB*YALEMCRIBA*BS*M*SS*ATTEMPT 2
+Solved: False
+Search time: 0:00:00.018234
+**MES*HUL*MERYLARES***SE*ATTEMPT 3
+Solved: False
+Search time: 0:00:00.016668
+*IS***NR**AMORE*EO***MTA*ATTEMPT 4
+Solved: False
+Search time: 0:00:00.029597
+**ASA**CATSALEMAMAN**AMS*ATTEMPT 5
+Solved: True
+Search time: 0:00:00.031567
+*BYTE*LARSFAKEDANOS*REVS*ATTEMPT 6
+Solved: False
+Search time: 0:00:00.013953
+*VB*S*AJARBLOCSAERO*STKS*ATTEMPT 7
+Solved: False
+Search time: 0:00:00.035372
+*AL*S*BEE*LOBAR*OOR*D*NS*ATTEMPT 8
+Solved: False
+Search time: 0:00:00.029034
+*AMA**RI*SGATED*DTS*SOY**ATTEMPT 9
+Solved: False
+Search time: 0:00:00.018983
+**TEN*EHLEBLAIR*EWN*HESA*ATTEMPT 10
+Solved: False
+Search time: 0:00:00.026782
+**FS**TATATINYTO*T***EA**ATTEMPT 11
+Solved: True
+Search time: 0:00:00.016060
+*TWAS*IHREOBOTEPELE*TRES*ATTEMPT 12
+Solved: False
+Search time: 0:00:00.017791
+*WMDS*RUI*BOCKSROHE*A*OS*ATTEMPT 13
+Solved: False
+Search time: 0:00:00.027365
+*COTY*INREOSHEAT*E**C*RS*ATTEMPT 14
+Solved: False
+Search time: 0:00:00.024595
+**O*S**RA*PHAIROATS*E*E**ATTEMPT 15
+Solved: False
+Search time: 0:00:00.020108
+*OG***BUL*BOSOXFESS*ASYE*ATTEMPT 16
+Solved: False
+Search time: 0:00:00.027063
+**FO**EONSMARCOA*A**ASYE*ATTEMPT 17
+Solved: False
+Search time: 0:00:00.020504
+*DURA*OSOSCROUP*IN**SAES*ATTEMPT 18
+Solved: False
+Search time: 0:00:00.008855
+*ACHY*RHEACRIMP*ECA*JTKN*ATTEMPT 19
+Solved: False
+Search time: 0:00:00.024198
+*SMOT**UNSALLEE*ATO*SSIN*ATTEMPT 20
+Solved: True
+Search time: 0:00:00.024514
+*AJAB*RANSDECOSINKA*TASK*ATTEMPT 21
+Solved: True
+Search time: 0:00:00.021315
+*SMTE*AAASBURMAANRE*MAYS*ATTEMPT 22
+Solved: False
+Search time: 0:00:00.028628
+**EA**EXPOFAUNAP*LE*ASTA*ATTEMPT 23
+Solved: False
+Search time: 0:00:00.024595
+*ARA**LUBEMASURISTS***YE*ATTEMPT 24
+Solved: False
+Search time: 0:00:00.010439
+**M***BOOEATRUE**P****H**4 puzzles Solved.
+Accuracy: 0.16

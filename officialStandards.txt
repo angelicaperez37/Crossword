@@ -1,0 +1,86 @@
+###------------------------CROSSWORD------------------------------###
+##------------------------------PUZZLE-----------------------------##
+##-------------------------CREATOR---------------------------------##
+###-----------------------------UTIL------------------------------###
+
+###----------------------------INDEX------------------------------###
+
+
+
+##---------------------------END INDEX-----------------------------##
+
+
+
+###----------------------------Notes------------------------------###
+#
+# Puzzle Standards:
+#	-15 x 15 most common
+#	-The diagram (placement of black squares within the grid) has to be 
+#	 diagonally symmetrical
+#	-2-letter words not allowed
+#	-3-letter words not preferred
+#	-Every letter must be a part of 2 words
+#	-No duplicate words
+#	
+# Puzzle Construction:
+#	1) Pick grid size
+#	2) List Words/Phrases (a lot)
+#	3) Sort list based on length
+#	4) Place some long words on board
+#		-symmetrically: either in the center, or a pair of words of same length
+#		-check for traps: (i.e. ending in 'q', or 'kx' or 'iy' pairings)
+#	5) Mark any required black spaces
+#		-beginnings and ends of words
+#	6) Arrange the rest of black spaces (diagonally symmetric)
+#		-standard: 1/6 of squares are black
+#		-avoid 2 and 3-letter words
+#	7) Complete the Grid
+#	8) Write Clues
+#		-1/3: straightforward (i.e. exhausted -> tired)
+#		-1/3: clever (i.e.  bamboo eaters: panda, farm animals: ants)
+#		-1/3: fill-ins, names, and crosswordese
+#			-crosswordese: (i.e. bizarre words)
+#
+#
+# Objects:
+#	-CrosswordPuzzle
+#		-Array: Grid
+#		-?Complete
+#   	-List: Across Words
+#   	-List: Down Words
+#		-List: Blank Words
+#		-List: Correct Words
+#		-List: Incorrect Words
+#	-Square
+#		-?black
+#		-?filled
+#		-letter
+#		-acrossWord
+#		-downWord
+#	-Word
+#		-Word
+#		-Guess --init: "...000..."
+#		-Clue
+#		-Solved? <--> getStatus(string guess)
+#		-Start Location
+#		-End Location
+#		-Length
+#		-DOWN or ACROSS
+#
+# Buttons:
+#	-checkPuzzle
+#	-checkWord
+#	-solvePuzzle
+#	-checkLetter
+#	-newPuzzle
+#	-clearPuzzle
+#
+#
+# Interactivity:
+#	-supply words
+#	-supply themes
+#	-for clues, give definitions and phrases containing word
+#
+###---------------------------------------------------------------###
+
+
