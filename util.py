@@ -13,35 +13,35 @@ def createClueDatabase():
 	with open('nyt-crossword/clues.csv','rU') as csvfile:
 		rd = csv.reader(csvfile) #, delimiter = '\n',quotechar='|')
 		for line in rd:
-			database.append(line[0].split('\t'))
+			database.append(line[0].split('\t')[1])
 
 	# remove duplicates
-	database.sort(key=lambda x: x[1])
+	database.sort() #key=lambda x: x[1))
 	uniqueDatabase = []
 	prevClue = None
 	for clue in database:
 		if prevClue == None:
 			uniqueDatabase.append(clue)
 			prevClue = clue
-			continue
-		elif prevClue[1] != clue[1]:
+		elif prevClue != clue: #[1] != clue[1]:
 			uniqueDatabase.append(clue)
 			prevClue = clue
-			continue
+
 	return uniqueDatabase
 
 # Stores a dict of clue/word pairs sorted by length
 # Dict keys: Word Length (int)
 # Removes any clues with answers of length greater than maxLength
-def sortDatabase(database, maxLength=25):
-	database.sort(key=lambda x: len(x[1]))
+def sortDatabase(database, maxLength):
+
+	database.sort(key=lambda x: len(x))
 	sortedData = {k: [] for k in range(maxLength+1)[3:maxLength+1]}
-	for i in range(len(database)):
-		clueLen = len(database[i][1])
+	for clue in database:
+		clueLen = len(clue) #[1])
 		if clueLen > maxLength:
 			break
 		elif clueLen > 2:
-			sortedData[clueLen].append(database[i])
+			sortedData[clueLen].append(clue)  #[i])
 	return sortedData
 
 ###---------------------------CW_UTIL---------------------------###

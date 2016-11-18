@@ -13,7 +13,8 @@ start = timeit.default_timer()
 
 # Process Database
 d = createClueDatabase()
-sortedData = sortDatabase(d, 9) #dict where keys are the lengths of the words co								ntained in corresponding list
+sortedData = sortDatabase(d, 5) #dict where keys are the lengths of the words co								ntained in corresponding list
+
 # Choose crossword grid pattern
 grid = getMiniGrid()
 #computeVariableOrderingLetterByLetter(csp)
@@ -26,7 +27,8 @@ csp = createCrosswordCSP(cw)
 print 'Created CrosswordCSP'
 print 'numVars = '+str(csp.numVars)
 print 'variables = '+str(csp.variables)
-print csp.binaryFactors
+print len(csp.binaryFactors['(0, 1)']['(0, 1, 1)'])
+print len(csp.binaryFactors['(0, 1, 1)']['(0, 1)'])
 
 
 ###
