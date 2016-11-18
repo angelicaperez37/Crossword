@@ -170,7 +170,40 @@ class BacktrackingSearch(object):
 				return minVar
 
 	def arc_consistency_check(self, var):
-		pass
+		"""
+		Perform the AC-3 algorithm. The goal is to reduce the size of the
+		domain values for the unassigned variables based on arc consistency.
+
+		@param var: The variable whose value has just been set.
+		"""
+		q = []
+		q.append(var)
+		while(len(q) > 0):
+			curVar = q.pop(0)
+			domainCurVar = copy.deepcopy(self.domains[curVar])
+			if len(domainCurVar) == 0:
+				continue
+
+			# Iterate through neighbors(overlapping Letter/Word vars) of curVar
+			for var2 in self.csp.get_neighbor_vars(curVar):
+				domainVar2 = copy.deepcopy(self.domains[var2])
+				for b in domainVar2:
+					if self.csp.unaryFactors[var2] is not None:
+						if self.csp.unaryFactors[var2][b] == 0:
+							self.domains[var2].remove(b)
+							if var2 not in q:
+								q.append(var2)
+							continue
+					bPossible = 0
+					if self.csp.binaryFactors[curVar][var2] is not None:
+						for a in domainCurVar:
+							if self.csp.binaryFactors[curVar][var2][a][b] > 0:
+								bPossible = 1
+								break
+						if bPossible == 0:
+							self.domains[var2].remove(b)
+							if var2 not in q:
+								q.append(var2)
 
 # Basic Word-by-Word Search w/ One Level of Forward Checking
 #	*) For each Word variable, chooses first assignment that

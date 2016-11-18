@@ -25,7 +25,7 @@ cw = createCrossword(size=5, sortedData=sortedData, grid=grid)
 csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
-search.solve(csp)
+search.solve(csp, mcv=False, ac3=True)
 
 
 ###

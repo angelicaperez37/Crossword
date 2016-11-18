@@ -57,6 +57,8 @@ class CSP(object):
 		self.unaryFactors[var] = None
 		self.binaryFactors[var] = dict()
 
+    def get_neighbor_vars(self, var):
+        return self.binaryFactors[var].keys()
 
 	def add_unary_factor(self, var, factorFunc):
 		"""
