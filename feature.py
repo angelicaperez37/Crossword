@@ -194,8 +194,8 @@ def diagonalLetterFeatures(cw, letter):
 
 		features += letterTypeFeatures(dlAssignment, 'diagonal_'+str(i)+'_', activeDiagonalLetterTypeFeatures)
 	return features
-			
-		
+
+
 # returns adjacent letter type features
 def adjacentLetterFeatures(cw, letter):
 	adjacentLetterIdxs = [(letter.loc[0]-1, letter.loc[1]), (letter.loc[0], letter.loc[1]+1), (letter.loc[0]+1, letter.loc[1]), (letter.loc[0], letter.loc[1]-1)]
@@ -232,17 +232,17 @@ def wordAttributeFeatures(cw, letter):
 	if 1 in activeWordAttributeFeatures:
 		features.append(('across_word_length', acrossWord.length*1.0/cw.size))
 		features.append(('down_word_length', downWord.length*1.0/cw.size))
-		
+
 	# edge_word
 	if 2 in activeWordAttributeFeatures:
 		if acrossWordLoc[0] == 0 or acrossWordLoc[0] == cw.size-1:
 			features.append(('across_edge_word', 1))
 		else:
-			features.append(('across_edge_word', 0)) 
+			features.append(('across_edge_word', 0))
 		if downWordLoc[1] == 0 or downWordLoc[1] == cw.size-1:
 			features.append(('down_edge_word', 1))
 		else:
-			features.append(('down_edge_word', 0)) 
+			features.append(('down_edge_word', 0))
 
 	# ratio_assigned
 	if 3 in activeWordAttributeFeatures:
@@ -258,7 +258,7 @@ def wordAttributeFeatures(cw, letter):
 			if curLetter.assigned:
 				assigned += 1
 		features.append(('down_ratio_assigned', assigned*1.0/downWord.length))
-		
+
 	# ratioAssignedVowels
 	# TODO
 
@@ -293,7 +293,7 @@ def gridLocationAttributeFeatures(cw, letter):
 				break
 		if notEdge:
 			features.append(('edge_letter', 0))
-	
+
 	# doubleEdgeLetter
 	if 4 in activeGridLocationAttributeFeatures:
 		edges = 0
@@ -326,8 +326,7 @@ def wordLocationAttributeFeatures(cw, letter):
 
 	# letterIdx
 	if 3 in activeWordLocationAttributeFeatures:
-		features.append(('across_letter_idx' = letter.acrossIdx*1.0/letter.acrossWord.length))
-		features.append(('down_letter_idx' = letter.downIdx*1.0/letter.downWord.length))
+		features.append(('across_letter_idx', letter.acrossIdx*1.0/letter.acrossWord.length))
+		features.append(('down_letter_idx', letter.downIdx*1.0/letter.downWord.length))
 
 	return features
-

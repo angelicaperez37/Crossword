@@ -2,7 +2,7 @@ import sys
 import os.path
 from util import *
 from classes import *
-import random 
+import random
 from datetime import datetime
 from search import *
 from grid import *
@@ -20,10 +20,17 @@ grid = getMiniGrid()
 
 # Create Crossword Object
 cw = createCrossword(size=5, sortedData=sortedData, grid=grid)
+csp = createCrosswordCSP(cw)
+
+print 'Created CrosswordCSP'
+print 'numVars = '+str(csp.numVars)
+print 'variables = '+str(csp.variables)
+print csp.binaryFactors
 
 
-features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
-print features
+###
+#features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
+#print features
 
 # Create MDP instance
 #mdp = CrosswordMDP(cw, grid)
@@ -57,4 +64,3 @@ for i in range(25):
 dataFile.write(str(numSolved) + ' puzzles Solved.\n')
 dataFile.write('Accuracy: ' + str(numSolved/25.0))
 '''
-
