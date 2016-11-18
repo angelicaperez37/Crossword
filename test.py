@@ -24,11 +24,8 @@ grid = getMiniGrid()
 cw = createCrossword(size=5, sortedData=sortedData, grid=grid)
 csp = createCrosswordCSP(cw)
 
-print 'Created CrosswordCSP'
-print 'numVars = '+str(csp.numVars)
-print 'variables = '+str(csp.variables)
-print len(csp.binaryFactors['(0, 1)']['(0, 1, 1)'])
-print len(csp.binaryFactors['(0, 1, 1)']['(0, 1)'])
+search = BacktrackingSearch()
+search.solve(csp)
 
 
 ###
