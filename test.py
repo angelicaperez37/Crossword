@@ -7,6 +7,7 @@ from datetime import datetime
 from search import *
 from grid import *
 from feature import *
+from csp import *
 
 start = timeit.default_timer()
 
