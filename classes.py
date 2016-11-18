@@ -22,11 +22,11 @@ class Crossword:
 	def addLetter(self, letter):
 		self.letters[letter.loc] = letter
 
-	def addEmptyWordLocation(self, loc):
-		self.emptyWordLocations.append(loc)
+	def addEmptyWordLocation(self, key):
+		self.emptyWordLocations.append(key)
 
-	def addEmptyLetterLocation(self, loc):
-		self.emptyLetterLocations.append(loc)
+	def addEmptyLetterLocation(self, key):
+		self.emptyLetterLocations.append(key)
 
 class Word:
 	def __init__(self, startLoc=None, length=None, across=True, assigned=False, assignment=None, domain=None):
@@ -38,14 +38,14 @@ class Word:
 		self.domain = domain
 
 class Letter:
-	def __init__(self, loc=None, acrossWordLoc=None, acrossIdx=None, downWordLoc=None, downIdx=None, assigned=False,assignment = None, domain=None):
+	def __init__(self, loc, acrossWordLoc=None, acrossIdx=None, \
+	downWordLoc=None, downIdx=None, assigned=False, assignment = None, \
+	domain=None):
 		self.loc = loc
-		self.acrossWordLoc = acrossWordLoc 
+		self.acrossWordLoc = acrossWordLoc
 		self.acrossIdx = acrossIdx
 		self.downWordLoc = downWordLoc
 		self.downIdx = downIdx
 		self.assigned = assigned
 		self.assignment = assignment
 		self.domain = domain
-
-

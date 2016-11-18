@@ -22,8 +22,10 @@ grid = getMiniGrid()
 # getMidiGrid()
 
 # Create Crossword Object
-cw = createCrossword(size=5, sortedData=sortedData, grid=grid)
+cw = createCrossword_REPLACEMENT(size=5, sortedData=sortedData, grid=grid)
 addSeedWords(cw)
+
+'''
 csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
@@ -37,7 +39,7 @@ for key in solution.keys():
 		word = cw.words[tup]
 		assignWord(cw, word, solution[key])
 print cw.grid
-		
+'''
 
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')

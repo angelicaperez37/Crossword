@@ -50,7 +50,7 @@ def createCrossword(size, sortedData, grid):
 	alpha = list(string.ascii_uppercase)
 	cw = Crossword(blanks=grid, size=size)
 	for row in range(size):
-		for col in range(size): 
+		for col in range(size):
 			if (row,col) not in [(0,0),(1,0),(3,4),(4,4)]: #list is null squares
 
 				# match each letter to its corresponding word
@@ -96,19 +96,22 @@ def createCrossword(size, sortedData, grid):
 
 
 # Creates new Crossword Board and Variables
-def createCrosswordCSP_REPLACEMENT(size=5, sortedData=None, grid=None):
-	cw = CrosswordCSP(size)
-	tiles = [(x,y) for x in range(csp.size) for y in range(csp.size)]
+def createCrossword_REPLACEMENT(size, sortedData, blanks):
+	cw = Crossword(size)
+	alpha = list(string.ascii_uppercase)
 
 	# Accounts for words that start on grid edges
+	sAcrossBlanks = copy.deepcopy(blanks)
+	sDownBlanks = copy.deepcopy(blanks)
+
 	for i in range(size):
 		if (i,0) not in grid:
-			grid.append((i,-1))
+			sAcrossBlanks.append((i,-1))
 		if (0,i) not in grid:
-			grid.append((-1,i))
+			sDownBlanks.append((-1,i))
 
-	sAcrossBlanks = sorted(grid, key=lambda x: (x[0],x[1]))
-	sDownBlanks = sorted(grid, key=lambda x: (x[1],x[0]))
+	sAcrossBlanks.sort(key=lambda x: (x[0],x[1]))
+	sDownBlanks.sort(key=lambda x: (x[1],x[0]))
 
 	# Create across Word variables
 	prev = None
@@ -116,12 +119,33 @@ def createCrosswordCSP_REPLACEMENT(size=5, sortedData=None, grid=None):
 		if prev == None:
 			prev = tile
 			continue
-		elif prev[0] != tile[0]:
-			loc = (prev[0],prev[1]+1,1)
-			cw.addWord(loc, Word(startLoc=(loc[0],loc[1]), length=size-loc[1], domain=copy.deepcopy(sortedData[size-loc[1]])))
+
+		key = (prev[0],prev[1]+1,1)
+		length = 0
+
+		# Cases
+		if prev[0] != tile[0] and prev[1] != size: # if word at right edge of grid
+			length = size-key[1]
+			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
+			 domain=copy.deepcopy(sortedData[length])))
+			cw.addEmptyWordLocation(key)
+		elif prev[1]+1 == tile[1]: # if prev and tile are adjacent
+			prev = tile
+			continue
 		else:
-			loc = (prev[0],prev[1]+1,1)
-			cw.addWord(loc, Word(startLoc=(loc[0],loc[1]), length=tile[1]-loc[1], domain=copy.deepcopy(sortedData[tile[1]-loc[1]])))
+			length = tile[1] - key[1]
+			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
+			 domain=copy.deepcopy(sortedData[length)))
+			cw.addEmptyWordLocation(key)
+
+		# Create overlapping Letter Variables
+		for i in range(length):
+			row = key[0]
+			col = key[1]
+			cw.addLetter(Letter(loc=(row, col+i), acrossWordLoc=(row, col), \
+		acrossIdx=i, domain=copy.deepcopy(alpha)))
+		cw.addEmptyLetterLocation((row,col+i))
+
 		prev = tile
 
 	# Create down Word variables
@@ -130,56 +154,35 @@ def createCrosswordCSP_REPLACEMENT(size=5, sortedData=None, grid=None):
 		if prev == None:
 			prev = tile
 			continue
-		elif prev[1] != tile[1]:
-			loc = (prev[0]+1,prev[1],0)
-			cw.addWord(loc, Word(startLoc=(loc[0],loc[1]), length=size-loc[0], domain=copy.deepcopy(sortedData[size-loc[0]])))
+
+		key = (prev[0]+1,prev[1],0)
+		length = 0
+
+		# Cases
+		if prev[1] != tile[1] and prev[0] != size: # if word at bottom edge of grid
+			length = size-key[0]
+			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
+			 domain=copy.deepcopy(sortedData[length])))
+			cw.addEmptyWordLocation(key)
+		elif prev[0]+1 == tile[0]: # if prev and tile are adjacent
+			prev = tile
+			continue
 		else:
-			loc = (prev[0]+1,prev[1],0)
-			cw.addWord(loc, Word(startLoc=(loc[0],loc[1]), length=tile[0]-loc[0], domain=copy.deepcopy(sortedData[tile[0]-loc[0]])))
+			length = tile[0]-key[0]
+			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
+			 domain=copy.deepcopy(sortedData[length])))
+			cw.addEmptyWordLocation(key)
 
-	# LEFTOFF
-	# Create Letter Variables
-	alpha = list(string.ascii_uppercase)
-	for row in range(size):
-		for col in range(size): 
-			if (row,col) not in grid: 
+		# Update overlapping Letter Variables
+		for i in range(length):
+			row = key[0]
+			col = key[1]
+			letter = cw.letters[(row+i, col)]
+			letter.downWordLoc = (row, col)
+			letter.downIdx = i
 
-				# match each letter to its corresponding word
-				acrossWordLoc = None
-				downWordLoc = None
-				acrossIdx = col
-				downIdx = row
-				if row < 2:
-					acrossWordLoc = (row, 1, 1)
-					acrossIdx -= 1
-				else:	acrossWordLoc = (row, 0, 1)
-				if col < 1:
-					downWordLoc = (2, col, 0)
-					downIdx -= 2
-				else:	downWordLoc = (0, col, 0)
+		prev = tile
 
-				cw.addLetter(Letter(loc=(row, col), acrossWordLoc=acrossWordLoc, acrossIdx=acrossIdx, downWordLoc=downWordLoc, downIdx=downIdx, domain=copy.deepcopy(alpha)))
-				cw.addEmptyLetterLocation((row,col))
-	cw.addWord((0,1,1), Word(startLoc=(0,1), length=4, domain=copy.deepcopy(sortedData[4])))
-	cw.addWord((0,1,0), Word(startLoc=(0,1), length=5, across=False, domain=copy.deepcopy(sortedData[5])))
-	cw.addWord((0,2,0), Word(startLoc=(0,2), length=5, across=False, domain=copy.deepcopy(sortedData[5])))
-	cw.addWord((0,3,0), Word(startLoc=(0,3), length=5, across=False, domain=copy.deepcopy(sortedData[5])))
-	cw.addWord((0,4,0), Word(startLoc=(0,4), length=3, across=False, domain=copy.deepcopy(sortedData[3])))
-	cw.addWord((1,1,1), Word(startLoc=(1,1), length=4, domain=copy.deepcopy(sortedData[4])))
-	cw.addWord((2,0,1), Word(startLoc=(2,0), length=5, domain=copy.deepcopy(sortedData[5])))
-	cw.addWord((2,0,0), Word(startLoc=(2,0), length=3, across=False, domain=copy.deepcopy(sortedData[3])))
-	cw.addWord((3,0,1), Word(startLoc=(3,0), length=4, domain=copy.deepcopy(sortedData[4])))
-	cw.addWord((4,0,1), Word(startLoc=(4,0), length=4, domain=copy.deepcopy(sortedData[4])))
-	cw.addEmptyWordLocation((0,1,0))
-	cw.addEmptyWordLocation((0,1,1))
-	cw.addEmptyWordLocation((0,2,0))
-	cw.addEmptyWordLocation((0,3,0))
-	cw.addEmptyWordLocation((0,4,0))
-	cw.addEmptyWordLocation((1,1,1))
-	cw.addEmptyWordLocation((2,0,1))
-	cw.addEmptyWordLocation((2,0,0))
-	cw.addEmptyWordLocation((3,0,1))
-	cw.addEmptyWordLocation((4,0,1))
 	return cw
 
 def assignWord(csp, word, assignment):
@@ -239,14 +242,14 @@ def chooseSeedWord(csp, key):
 	random.shuffle(word.domain)
 	assignWord(csp, word, word.domain[0])
 	propogateWordAssignment(csp, word)
-	
+
 #TODO: Generalize
 def addSeedWords(cw):
 	acrossWord = cw.words[(2,0,1)]
 	random.shuffle(acrossWord.domain)
 	assignWord(cw, acrossWord, acrossWord.domain[0])
 	propogateWordAssignment(cw,acrossWord)
-	
+
 
 ###------------------VARIABLE_ORDERING_ALGORITHMS------------------###
 
@@ -287,7 +290,7 @@ def ac3(csp, assignedWord, assignedLetter):
 			#update letter domains
 			csp.letters[curLetterLoc].assigned = True
 			csp.letters[curLetterLoc].assignment = curLetter
-	
+
 			#update word domains
 			curWord = findWordFromSquare(csp, curLetterLoc) #unwritten function
 
