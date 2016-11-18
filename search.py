@@ -154,7 +154,7 @@ class BacktrackingSearch(object):
 		if not self.mcv:
 			# Select a variable without any heuristicss
 			for var in self.csp.variables:
-				if var not in assignment	return var
+				if var not in assignment:	return var
 			else:
 				minVals = float("inf")
 				minVar = float("inf")

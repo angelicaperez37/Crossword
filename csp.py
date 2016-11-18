@@ -19,7 +19,7 @@ class CSP(object):
 
 		# Each key K in this dictionary is a variable name.
 		# domain[K] is the list of domain values that variable K can take on.
-		self.domain = {}
+		self.values = {}
 
 		# Each entry is a unary factor table for the corresponding variable.
 		# The factor table corresponds to the weight distribution of a variable
@@ -53,7 +53,7 @@ class CSP(object):
 
 		self.numVars += 1
 		self.variables.append(var)
-		self.domain[var] = domain
+		self.values[var] = domain
 		self.unaryFactors[var] = None
 		self.binaryFactors[var] = dict()
 
@@ -68,7 +68,7 @@ class CSP(object):
 		value |val|?
 		=> csp.unaryFactors[var][val]
 		"""
-		factor = {val:float(factorFunc(val)) for val in self.domain[var]}
+		factor = {val:float(factorFunc(val)) for val in self.values[var]}
 		if self.unaryFactors[var] is not None:
 			assert len(self.unaryFactors[var]) == len(factor)
 			self.unaryFactors[var] = {val:self.unaryFactors[var][val] * \
@@ -100,10 +100,10 @@ class CSP(object):
 
 		self.update_binary_factor_table(var1, var2,
 			{val1: {val2: float(factor_func(val1, val2)) \
-				for val2 in self.domain[var2]} for val1 in self.domain[var1]})
+				for val2 in self.values[var2]} for val1 in self.values[var1]})
 		self.update_binary_factor_table(var2, var1, \
 			{val2: {val1: float(factor_func(val1, val2)) \
-				for val1 in self.domain[var1]} for val2 in self.domain[var2]})
+				for val1 in self.values[var1]} for val2 in self.values[var2]})
 
 	def update_binary_factor_table(self, var1, var2, table):
 		"""
