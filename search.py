@@ -2,6 +2,7 @@ from util import *
 from classes import *
 import random
 import timeit
+from random import shuffle
 
 class BacktrackingSearch(object):
 	def __init__(self):
@@ -82,8 +83,9 @@ class BacktrackingSearch(object):
 		self.ac3 = ac3
 		#self.reset_results()
 		self.domains = {var: list(self.csp.values[var]) for var in self.csp.variables}
-		self.backtrack({}, 0,1)
-		self.print_stats()
+		solution = self.backtrack({}, 0,1)
+		return solution
+		#self.print_stats()
 
 	def backtrack(self, assignment, numAssigned, weight):
 		"""
@@ -112,14 +114,14 @@ class BacktrackingSearch(object):
 			# left out part that updates optimalAssignment
 			# if len(self.optimalAssignment) == 0 or weight >=
 
-			print "Found Solution: "
-			print newAssignment
-
-			return
+			return newAssignment
 
 		# Select next variable to be assigned
 		var = self.get_unassigned_variable(assignment)
+
+
 		# Get an ordering of the values.
+		shuffle(self.domains[var])
 		ordered_values = self.domains[var]
 
 		# Continue the backtracking recursion using |var| and |ordered_values|
@@ -128,8 +130,9 @@ class BacktrackingSearch(object):
 				deltaWeight = self.get_delta_weight(assignment, var, val)
 				if deltaWeight > 0:
 					assignment[var] = val
-					self.backtrack(assignment, numAssigned+1, weight*deltaWeight)
+					newAssignment = self.backtrack(assignment, numAssigned+1, weight*deltaWeight)
 					del assignment[var]
+					return newAssignment
 		else:
 			for val in ordered_values:
 				deltaWeight = self.get_delta_weight(assignment, var, val)
@@ -138,10 +141,11 @@ class BacktrackingSearch(object):
 					localCopy = copy.deepcopy(self.domains)
 					self.domains[var] = [val]
 					self.arc_consistency_check(var)
-					self.backtrack(assignment, numAssigned+1, weight+deltaWeight)
+					solution = self.backtrack(assignment, numAssigned+1, weight*deltaWeight)
 
 					self.domains = localCopy
 					del assignment[var]
+					return solution
 
 	def get_unassigned_variable(self, assignment):
 		"""

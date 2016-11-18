@@ -57,8 +57,8 @@ class CSP(object):
 		self.unaryFactors[var] = None
 		self.binaryFactors[var] = dict()
 
-    def get_neighbor_vars(self, var):
-        return self.binaryFactors[var].keys()
+	def get_neighbor_vars(self, var):
+		return self.binaryFactors[var].keys()
 
 	def add_unary_factor(self, var, factorFunc):
 		"""
@@ -149,7 +149,7 @@ def createCrosswordCSP(cw):
 		for idx in range(word.length):
 			letterKey = (key1[0]+idx, key1[1])
 			if key1[2] == 1:
-				letterKey = (key1[0], key[1]+idx)
+				letterKey = (key1[0], key1[1]+idx)
 			if letterKey not in cw.blanks:
 				csp.add_binary_factor(str(key1), str(letterKey), lambda x,y: x[idx] == y)
 

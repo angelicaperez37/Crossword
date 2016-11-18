@@ -187,15 +187,19 @@ def assignWord(csp, word, assignment):
 	word.assigned = True
 	word.assignment = assignment
 	word.domain = [assignment]
-	
 	# update grid
 	for i in range(word.length):
 		gridRow = word.startLoc[0]
 		gridCol = word.startLoc[1]
 		if word.across:	gridCol += i
 		else:	gridRow += i
-		csp.grid[gridRow,gridCol] = assignment[1][i]
+		csp.grid[gridRow,gridCol] = assignment[i]
 
+def assignLetter(cw, letter, assignment):
+	letter.assigned = True
+	letter.assignment = assignment
+	letter.domain = [assignment]
+	cw.grid[letter.loc] = assignment
 
 # Constraint Propogation upon the assignment of a Word variable word
 def propogateWordAssignment(csp, word):
@@ -209,9 +213,9 @@ def propogateWordAssignment(csp, word):
 		letter = csp.letters[(gridRow,gridCol)]
 		if letter.assigned:
 			continue
-		letter.domain = [word.assignment[1][i]]
+		letter.domain = [word.assignment[i]]
 		letter.assigned = True
-		letter.assignment = word.assignment[1][i]
+		letter.assignment = word.assignment[i]
 
 		# Update overlapping words' domains
 		overlapWordKey = letter.acrossWordLoc
@@ -225,7 +229,7 @@ def propogateWordAssignment(csp, word):
 
 		toRemove = []
 		for domWord in overlapWord.domain:
-			if word.assignment[1][i] != domWord[1][overlapWordOffset]:
+			if word.assignment[i] != domWord[overlapWordOffset]:
 				toRemove.append(domWord)
 		for elem in toRemove:
 			overlapWord.domain.remove(elem)
@@ -235,6 +239,13 @@ def chooseSeedWord(csp, key):
 	random.shuffle(word.domain)
 	assignWord(csp, word, word.domain[0])
 	propogateWordAssignment(csp, word)
+	
+#TODO: Generalize
+def addSeedWords(cw):
+	acrossWord = cw.words[(2,0,1)]
+	random.shuffle(acrossWord.domain)
+	assignWord(cw, acrossWord, acrossWord.domain[0])
+	propogateWordAssignment(cw,acrossWord)
 	
 
 ###------------------VARIABLE_ORDERING_ALGORITHMS------------------###

@@ -8,6 +8,7 @@ from search import *
 from grid import *
 from feature import *
 from csp import *
+from ast import literal_eval as make_tuple
 
 start = timeit.default_timer()
 
@@ -22,11 +23,21 @@ grid = getMiniGrid()
 
 # Create Crossword Object
 cw = createCrossword(size=5, sortedData=sortedData, grid=grid)
+addSeedWords(cw)
 csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
-search.solve(csp, mcv=False, ac3=True)
-
+solution = search.solve(csp, mcv=False, ac3=True)
+for key in solution.keys():
+	tup = make_tuple(key)
+	if len(tup) == 2:
+		letter = cw.letters[tup]
+		assignLetter(cw, letter, solution[key])
+	else:
+		word = cw.words[tup]
+		assignWord(cw, word, solution[key])
+print cw.grid
+		
 
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
