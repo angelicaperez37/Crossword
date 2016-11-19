@@ -46,7 +46,7 @@ def sortDatabase(database, maxLength):
 
 ###---------------------------CW_UTIL---------------------------###
 # Creates new Crossword Board and Variables
-def createCrossword(size, sortedData, grid):
+def createCrosswordBasic(size, sortedData, grid):
 	alpha = list(string.ascii_uppercase)
 	cw = Crossword(blanks=grid, size=size)
 	for row in range(size):
@@ -96,8 +96,8 @@ def createCrossword(size, sortedData, grid):
 
 
 # Creates new Crossword Board and Variables
-def createCrossword_REPLACEMENT(size, sortedData, blanks):
-	cw = Crossword(size)
+def createCrossword(size, sortedData, blanks):
+	cw = Crossword(blanks, size)
 	alpha = list(string.ascii_uppercase)
 
 	# Accounts for words that start on grid edges
@@ -105,9 +105,9 @@ def createCrossword_REPLACEMENT(size, sortedData, blanks):
 	sDownBlanks = copy.deepcopy(blanks)
 
 	for i in range(size):
-		if (i,0) not in grid:
+		if (i,0) not in blanks:
 			sAcrossBlanks.append((i,-1))
-		if (0,i) not in grid:
+		if (0,i) not in blanks:
 			sDownBlanks.append((-1,i))
 
 	sAcrossBlanks.sort(key=lambda x: (x[0],x[1]))
@@ -124,27 +124,27 @@ def createCrossword_REPLACEMENT(size, sortedData, blanks):
 		length = 0
 
 		# Cases
-		if prev[0] != tile[0] and prev[1] != size: # if word at right edge of grid
+		if prev[0] != tile[0] and prev[1] != size-1: # if word at right edge of grid
 			length = size-key[1]
 			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
 			 domain=copy.deepcopy(sortedData[length])))
 			cw.addEmptyWordLocation(key)
-		elif prev[1]+1 == tile[1]: # if prev and tile are adjacent
+		elif (prev[1]+1 == tile[1]) or (prev[0]!=tile[0] and prev[1]==size-1): # if prev and tile are adjacent
 			prev = tile
 			continue
 		else:
 			length = tile[1] - key[1]
 			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
-			 domain=copy.deepcopy(sortedData[length)))
+			 domain=copy.deepcopy(sortedData[length])))
 			cw.addEmptyWordLocation(key)
 
 		# Create overlapping Letter Variables
 		for i in range(length):
 			row = key[0]
 			col = key[1]
-			cw.addLetter(Letter(loc=(row, col+i), acrossWordLoc=(row, col), \
+			cw.addLetter(Letter(loc=(row, col+i), acrossWordLoc=(row, col, 1), \
 		acrossIdx=i, domain=copy.deepcopy(alpha)))
-		cw.addEmptyLetterLocation((row,col+i))
+			cw.addEmptyLetterLocation((row,col+i))
 
 		prev = tile
 
@@ -159,18 +159,18 @@ def createCrossword_REPLACEMENT(size, sortedData, blanks):
 		length = 0
 
 		# Cases
-		if prev[1] != tile[1] and prev[0] != size: # if word at bottom edge of grid
+		if prev[1] != tile[1] and prev[0] != size-1: # if word at bottom edge of grid
 			length = size-key[0]
 			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
-			 domain=copy.deepcopy(sortedData[length])))
+			 across=False, domain=copy.deepcopy(sortedData[length])))
 			cw.addEmptyWordLocation(key)
-		elif prev[0]+1 == tile[0]: # if prev and tile are adjacent
+		elif (prev[0]+1 == tile[0]) or (prev[1]!=tile[1] and prev[0]==size-1): # if prev and tile are adjacent
 			prev = tile
 			continue
 		else:
 			length = tile[0]-key[0]
 			cw.addWord(key, Word(startLoc=(key[0],key[1]), length=length, \
-			 domain=copy.deepcopy(sortedData[length])))
+			 across=False, domain=copy.deepcopy(sortedData[length])))
 			cw.addEmptyWordLocation(key)
 
 		# Update overlapping Letter Variables
@@ -178,7 +178,7 @@ def createCrossword_REPLACEMENT(size, sortedData, blanks):
 			row = key[0]
 			col = key[1]
 			letter = cw.letters[(row+i, col)]
-			letter.downWordLoc = (row, col)
+			letter.downWordLoc = (row, col, 0)
 			letter.downIdx = i
 
 		prev = tile

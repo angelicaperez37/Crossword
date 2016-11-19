@@ -14,18 +14,19 @@ start = timeit.default_timer()
 
 # Process Database
 d = createClueDatabase()
-sortedData = sortDatabase(d, 5) #dict where keys are the lengths of the words co								ntained in corresponding list
+sortedData = sortDatabase(d, 9) #dict where keys are the lengths of the words co								ntained in corresponding list
 
 # Choose crossword grid pattern
-grid = getMiniGrid()
+grid = getMidiGrid()
 #computeVariableOrderingLetterByLetter(csp)
 # getMidiGrid()
 
 # Create Crossword Object
-cw = createCrossword_REPLACEMENT(size=5, sortedData=sortedData, grid=grid)
-addSeedWords(cw)
+cw = createCrossword(size=9, sortedData=sortedData, blanks=grid)
 
-'''
+
+#addSeedWords(cw)
+
 csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
@@ -39,7 +40,6 @@ for key in solution.keys():
 		word = cw.words[tup]
 		assignWord(cw, word, solution[key])
 print cw.grid
-'''
 
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
