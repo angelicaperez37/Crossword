@@ -119,6 +119,9 @@ class BacktrackingSearch(object):
 		# Select next variable to be assigned
 		var = self.get_unassigned_variable(assignment)
 
+		print 'In backtrackSearch'
+		print var
+		print len(self.domains[var])
 
 		# Get an ordering of the values.
 		shuffle(self.domains[var])
@@ -137,6 +140,9 @@ class BacktrackingSearch(object):
 			for val in ordered_values:
 				deltaWeight = self.get_delta_weight(assignment, var, val)
 				if deltaWeight > 0:
+
+					print 'Chose val: '+val
+
 					assignment[var] = val
 					localCopy = copy.deepcopy(self.domains)
 					self.domains[var] = [val]
@@ -180,6 +186,7 @@ class BacktrackingSearch(object):
 
 		@param var: The variable whose value has just been set.
 		"""
+
 		q = []
 		q.append(var)
 		while(len(q) > 0):
@@ -190,14 +197,19 @@ class BacktrackingSearch(object):
 
 			# Iterate through neighbors(overlapping Letter/Word vars) of curVar
 			for var2 in self.csp.get_neighbor_vars(curVar):
+
+
 				domainVar2 = copy.deepcopy(self.domains[var2])
 				for b in domainVar2:
+					'''
 					if self.csp.unaryFactors[var2] is not None:
 						if self.csp.unaryFactors[var2][b] == 0:
 							self.domains[var2].remove(b)
 							if var2 not in q:
 								q.append(var2)
 							continue
+					'''
+
 					bPossible = 0
 					if self.csp.binaryFactors[curVar][var2] is not None:
 						for a in domainCurVar:
@@ -208,6 +220,8 @@ class BacktrackingSearch(object):
 							self.domains[var2].remove(b)
 							if var2 not in q:
 								q.append(var2)
+
+
 
 # Basic Word-by-Word Search w/ One Level of Forward Checking
 #	*) For each Word variable, chooses first assignment that

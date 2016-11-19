@@ -31,14 +31,24 @@ csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
 solution = search.solve(csp, mcv=False, ac3=True)
-for key in solution.keys():
-	tup = make_tuple(key)
+for var in csp.variables:
+	tup = make_tuple(var)
+
+
 	if len(tup) == 2:
+		print var
+		print len(csp.values[var])
+
+
+	if len(tup) == 2 and len(csp.values[var]) == 1:
+		print var
+		print csp.values[var][0]
+
 		letter = cw.letters[tup]
-		assignLetter(cw, letter, solution[key])
-	else:
+		assignLetter(cw, letter, csp.values[var][0])
+	elif len(csp.values[var]) == 1:
 		word = cw.words[tup]
-		assignWord(cw, word, solution[key])
+		assignWord(cw, word, csp.values[var][0])
 print cw.grid
 
 ###
