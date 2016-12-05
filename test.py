@@ -20,12 +20,13 @@ sortedData = sortDatabase(d, 5) #dict where keys are the lengths of the words co
 grid = getMiniGrid()
 
 # Create Crossword Object
-cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
+#cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
 #addSeedWords(cw)
 
 for i in range(10):
 	print 'Iteration ' + str(i)
+	cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 	csp = createCrosswordCSP(cw)
 	search = BacktrackingSearch()
 	solution = search.solve(csp, mcv=False, ac3=True)
