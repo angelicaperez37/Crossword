@@ -103,7 +103,7 @@ class BacktrackingSearch(object):
 
 		self.numOperations += 1
 		#assert weight > 0
-		if numAssigned == len(self.csp.letters):
+		if numAssigned == self.csp.numVars:
 			# Solution found
 			self.numAssignments += 1
 			newAssignment = {}
@@ -146,8 +146,8 @@ class BacktrackingSearch(object):
 					assignment[var] = val
 					localCopy = copy.deepcopy(self.domains)
 					self.domains[var] = [val]
-					self.arc_consistency_check(var)
-					solution = self.backtrack(assignment, numAssigned+1, weight*deltaWeight)
+					varsAssigned = self.arc_consistency_check(var)
+					solution = self.backtrack(assignment, numAssigned+varsAssigned+1, weight*deltaWeight)
 
 					self.domains = localCopy
 					del assignment[var]
