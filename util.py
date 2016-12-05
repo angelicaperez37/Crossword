@@ -204,6 +204,14 @@ def assignLetter(cw, letter, assignment):
 	letter.domain = [assignment]
 	cw.grid[letter.loc] = assignment
 
+# adds the set of assignments to cw
+def addAssignmentsToGrid(cw, assignments):
+	for key in assignments.keys():
+		if len(key) == 2:
+			assignLetter(cw, cw.letters[key], assignments[key])
+		else:
+			assignWord(cw, cw.words[key], assignments[key])
+
 # Constraint Propogation upon the assignment of a Word variable word
 def propogateWordAssignment(csp, word):
 	for i in range(word.length):
