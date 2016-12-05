@@ -103,7 +103,7 @@ class BacktrackingSearch(object):
 
 		self.numOperations += 1
 		#assert weight > 0
-		if numAssigned == self.csp.numVars:
+		if numAssigned == len(self.csp.letters):
 			# Solution found
 			self.numAssignments += 1
 			newAssignment = {}
