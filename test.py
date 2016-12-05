@@ -14,16 +14,13 @@ start = timeit.default_timer()
 
 # Process Database
 d = createClueDatabase()
-sortedData = sortDatabase(d, 9) #dict where keys are the lengths of the words co								ntained in corresponding list
+sortedData = sortDatabase(d, 5) #dict where keys are the lengths of the words co								ntained in corresponding list
 
 # Choose crossword grid pattern
-grid = getMidiGrid()
-#computeVariableOrderingLetterByLetter(csp)
-# getMidiGrid()
+grid = getMiniGrid()
 
 # Create Crossword Object
-cw = createCrossword(size=9, sortedData=sortedData, blanks=grid)
-
+cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
 #addSeedWords(cw)
 
