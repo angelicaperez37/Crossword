@@ -207,15 +207,11 @@ def assignLetter(cw, letter, assignment):
 # adds the set of assignments to cw
 def addAssignmentsToGrid(cw, assignments):
 	for key in assignments.keys():
-		print key
-		print assignments[key]
-		print len(key)
-		print len(list(key))
-		'''if len(list(key)) == 2:
+		if len(list(key)) == 6:
 			assignLetter(cw, cw.letters[key], assignments[key])
 		else:
 			assignWord(cw, cw.words[key], assignments[key])
-		'''
+		
 
 # Constraint Propogation upon the assignment of a Word variable word
 def propogateWordAssignment(csp, word):
