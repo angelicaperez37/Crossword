@@ -148,7 +148,7 @@ class BacktrackingSearch(object):
 					return solution
 			# if no assignment found for variable
 			print assignment
-			return assignment
+			return copy.deepcopy(assignment)
 
 	def get_unassigned_variable(self, assignment):
 		"""
