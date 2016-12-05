@@ -186,7 +186,7 @@ class BacktrackingSearch(object):
 
 		@param var: The variable whose value has just been set.
 		"""
-
+		numAssigned = 0
 		q = []
 		q.append(var)
 		while(len(q) > 0):
@@ -220,7 +220,7 @@ class BacktrackingSearch(object):
 							self.domains[var2].remove(b)
 							if var2 not in q:
 								q.append(var2)
-
+		return numAssigned
 
 
 # Basic Word-by-Word Search w/ One Level of Forward Checking
