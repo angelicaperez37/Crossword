@@ -28,7 +28,7 @@ csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
 solution = search.solve(csp, mcv=False, ac3=True)
-addAssignmentToGrid(cw, solution)
+addAssignmentsToGrid(cw, solution)
 print cw.grid
 
 '''for var in csp.variables:
