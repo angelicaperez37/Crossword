@@ -4,6 +4,7 @@ import random
 from classes import *
 import string
 import copy
+from ast import literal_eval as make_tuple
 
 ###-----------------------DATABASE_PROCESSING------------------------###
 
@@ -207,10 +208,11 @@ def assignLetter(cw, letter, assignment):
 # adds the set of assignments to cw
 def addAssignmentsToGrid(cw, assignments):
 	for key in assignments.keys():
-		if len(list(key)) == 6:
-			assignLetter(cw, cw.letters[key], assignments[key])
+		keyTup = make_tuple(key)
+		if len(keyTup) == 2:
+			assignLetter(cw, cw.letters[keyTup], assignments[key])
 		else:
-			assignWord(cw, cw.words[key], assignments[key])
+			assignWord(cw, cw.words[keyTup], assignments[key])
 		
 
 # Constraint Propogation upon the assignment of a Word variable word
