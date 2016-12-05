@@ -119,12 +119,6 @@ class BacktrackingSearch(object):
 		# Select next variable to be assigned
 		var = self.get_unassigned_variable(assignment)
 
-		print 'In backtrackSearch'
-		print var
-		print len(self.domains[var])
-	 	print 'numAssigned = '+str(numAssigned)
-		print 'totalVars' + str(self.csp.numVars)
-
 		# Get an ordering of the values.
 		shuffle(self.domains[var])
 		ordered_values = self.domains[var]
@@ -143,8 +137,6 @@ class BacktrackingSearch(object):
 				deltaWeight = self.get_delta_weight(assignment, var, val)
 				if deltaWeight > 0:
 
-					print 'Chose val: '+val
-
 					assignment[var] = val
 					localCopy = copy.deepcopy(self.domains)
 					self.domains[var] = [val]
@@ -154,6 +146,8 @@ class BacktrackingSearch(object):
 					self.domains = localCopy
 					del assignment[var]
 					return solution
+			# if no assignment found for variable
+			return assignment
 
 	def get_unassigned_variable(self, assignment):
 		"""

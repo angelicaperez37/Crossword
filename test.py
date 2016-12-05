@@ -24,12 +24,13 @@ cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
 #addSeedWords(cw)
 
-csp = createCrosswordCSP(cw)
-
-search = BacktrackingSearch()
-solution = search.solve(csp, mcv=False, ac3=True)
-addAssignmentsToGrid(cw, solution)
-print cw.grid
+for i in range(10):
+	print 'Iteration ' + str(i)
+	csp = createCrosswordCSP(cw)
+	search = BacktrackingSearch()
+	solution = search.solve(csp, mcv=False, ac3=True)
+	addAssignmentsToGrid(cw, solution)
+	print cw.grid
 
 '''for var in csp.variables:
 	tup = make_tuple(var)
