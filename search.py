@@ -221,8 +221,6 @@ class BacktrackingSearch(object):
 						self.domains[var2].remove(b)
 						if var2 not in q:
 							q.append(var2)
-			#if len(self.domains[var2]) == 1:
-			#	numAssigned += 1
 		return numAssigned
 
 

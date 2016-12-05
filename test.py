@@ -28,7 +28,8 @@ csp = createCrosswordCSP(cw)
 
 search = BacktrackingSearch()
 solution = search.solve(csp, mcv=False, ac3=True)
-for var in csp.variables:
+print solution
+'''for var in csp.variables:
 	tup = make_tuple(var)
 
 
@@ -47,6 +48,7 @@ for var in csp.variables:
 		word = cw.words[tup]
 		assignWord(cw, word, csp.values[var][0])
 print cw.grid
+'''
 
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
