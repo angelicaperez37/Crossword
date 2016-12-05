@@ -147,6 +147,7 @@ class BacktrackingSearch(object):
 					del assignment[var]
 					return solution
 			# if no assignment found for variable
+			print assignment
 			return assignment
 
 	def get_unassigned_variable(self, assignment):
