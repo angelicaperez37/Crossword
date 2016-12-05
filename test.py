@@ -24,70 +24,41 @@ grid = getMidiGrid()
 
 #addSeedWords(cw)
 
-for i in range(10):
+numSolved = 0
+for i in range(100):
+	solved = False
 	print 'Iteration ' + str(i)
 	cw = createCrossword(size=9, sortedData=sortedData, blanks=grid)
 	csp = createCrosswordCSP(cw)
+	start = datetime.now()
 	search = BacktrackingSearch()
 	solution = search.solve(csp, mcv=False, ac3=True)
-	print solution
+	end = datetime.now()
 	addAssignmentsToGrid(cw, solution)
-	print cw.grid
 
-'''for var in csp.variables:
-	tup = make_tuple(var)
+	if len(solution.keys()) == csp.numVars:
+		numSolved += 1
+		solved = True
 
+	# For logging experimental results
+	dataFileName = 'basicMidiBacktrackSearch.txt'
+	df = open(dataFileName, 'a')
+	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nSearch time: '+ str(end-start) + '\n'
+	df.write(toWrite)
+	df.close()
+	df = open(dataFileName, 'ab')
+	cw.grid.tofile(df, " ")
+	df.close()
 
-	if len(tup) == 2:
-		print var
-		print len(csp.values[var])
-
-
-	if len(tup) == 2 and len(csp.values[var]) == 1:
-		print var
-		print csp.values[var][0]
-
-		letter = cw.letters[tup]
-		assignLetter(cw, letter, csp.values[var][0])
-	elif len(csp.values[var]) == 1:
-		word = cw.words[tup]
-		assignWord(cw, word, csp.values[var][0])
-print cw.grid
-'''
-
+dataFileName = 'basicMidiBacktrackSearch.txt'
+df = open(dataFileName, 'a')
+df.write("Solved "+str(numSolved)+" out of "+str(i+1)+" puzzles \n")
+df.close()
+	
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
 #print features
 
-# Create MDP instance
-#mdp = CrosswordMDP(cw, grid)
 
 
-# Solve Board
-'''numSolved = 0
 
-# For logging experimental results
-dataFileName = 'basicSearchLetterByLetter.txt'
-dataFile = open(dataFileName, 'a')
-
-for i in range(25):
-	csp = createCrosswordCSP(size=9, sortedData=sortedData)
-	chooseSeedWord(csp, (2,0,1))
-	chooseSeedWord(csp, (0,2,0))
-	start = datetime.now()
-
-	solved = basicLetterByLetterSearch(sortedData, csp, order)
-
-	end = datetime.now()
-	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nSearch time: '+ str(end-start) + '\n'
-
-	print toWrite
-
-	dataFile.write(toWrite)
-	dataFile.write(csp.grid)
-
-	if solved:	numSolved += 1
-
-dataFile.write(str(numSolved) + ' puzzles Solved.\n')
-dataFile.write('Accuracy: ' + str(numSolved/25.0))
-'''

@@ -147,7 +147,6 @@ class BacktrackingSearch(object):
 					del assignment[var]
 					return solution
 			# if no assignment found for variable
-			print assignment
 			return copy.deepcopy(assignment)
 
 	def get_unassigned_variable(self, assignment):
@@ -289,7 +288,6 @@ def basicSearch(sortedData, csp, order):
 		# Constraint Propogation
 		propogateWordAssignment(csp, word)
 
-	print csp.grid
 	return True
 
 # Basic Letter-By-Letter Search w/ Magnitude/NeighborAverage Scoring
@@ -376,5 +374,4 @@ def basicLetterByLetterSearch(sortedData, csp, order):
 			assignWord(csp, downWord, downWord.domain[0])
 			propogateWordAssignment(csp, downWord)
 
-	print csp.grid
 	return True
