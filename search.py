@@ -122,6 +122,8 @@ class BacktrackingSearch(object):
 		print 'In backtrackSearch'
 		print var
 		print len(self.domains[var])
+	 	print 'numAssigned = '+str(numAssigned)
+		print 'totalVars' + str(self.csp.numVars)
 
 		# Get an ordering of the values.
 		shuffle(self.domains[var])
@@ -198,7 +200,6 @@ class BacktrackingSearch(object):
 			# Iterate through neighbors(overlapping Letter/Word vars) of curVar
 			for var2 in self.csp.get_neighbor_vars(curVar):
 
-
 				domainVar2 = copy.deepcopy(self.domains[var2])
 				for b in domainVar2:
 					'''
@@ -211,15 +212,17 @@ class BacktrackingSearch(object):
 					'''
 
 					bPossible = 0
-					if self.csp.binaryFactors[curVar][var2] is not None:
-						for a in domainCurVar:
-							if self.csp.binaryFactors[curVar][var2][a][b] > 0:
-								bPossible = 1
-								break
-						if bPossible == 0:
-							self.domains[var2].remove(b)
-							if var2 not in q:
-								q.append(var2)
+					#if self.csp.binaryFactors[curVar][var2] is not None:
+					for a in domainCurVar:
+						if self.csp.binaryFactors[curVar][var2][a][b] > 0:
+							bPossible = 1
+							break
+					if bPossible == 0:
+						self.domains[var2].remove(b)
+						if var2 not in q:
+							q.append(var2)
+			#if len(self.domains[var2]) == 1:
+			#	numAssigned += 1
 		return numAssigned
 
 
