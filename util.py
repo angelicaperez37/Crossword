@@ -207,6 +207,8 @@ def assignLetter(cw, letter, assignment):
 # adds the set of assignments to cw
 def addAssignmentsToGrid(cw, assignments):
 	for key in assignments.keys():
+		print key
+		print len(key)
 		if len(key) == 2:
 			assignLetter(cw, cw.letters[key], assignments[key])
 		else:
