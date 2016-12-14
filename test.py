@@ -23,9 +23,11 @@ grid = getMidiGrid()
 #cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
 #addSeedWords(cw)
-
+iters = 100
 numSolved = 0
-for i in range(100):
+temp = datetime.now()
+totalTime = temp-temp
+for i in range(iters):
 	solved = False
 	print 'Iteration ' + str(i)
 	cw = createCrossword(size=9, sortedData=sortedData, blanks=grid)
@@ -35,6 +37,7 @@ for i in range(100):
 	solution = search.solve(csp, mcv=False, ac3=True)
 	end = datetime.now()
 	addAssignmentsToGrid(cw, solution)
+	totalTime += (end-start)
 
 	if len(solution.keys()) == csp.numVars:
 		numSolved += 1
@@ -43,7 +46,7 @@ for i in range(100):
 	# For logging experimental results
 	dataFileName = 'basicMidiBacktrackSearch.txt'
 	df = open(dataFileName, 'a')
-	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nSearch time: '+ str(end-start) + '\n'
+	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nAccuracy so far: ' + numSolved*1.0/i + '\nSearch time: '+ str(end-start) + '\nAverage time: ' +totalTime/i + '\n'
 	df.write(toWrite)
 	df.close()
 	df = open(dataFileName, 'ab')
@@ -54,11 +57,7 @@ dataFileName = 'basicMidiBacktrackSearch.txt'
 df = open(dataFileName, 'a')
 df.write("Solved "+str(numSolved)+" out of "+str(i+1)+" puzzles \n")
 df.close()
-	
+
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
 #print features
-
-
-
-
