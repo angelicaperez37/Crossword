@@ -46,7 +46,7 @@ for i in range(iters):
 	# For logging experimental results
 	dataFileName = 'basicMidiBacktrackSearch.txt'
 	df = open(dataFileName, 'a')
-	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nAccuracy so far: ' + numSolved*1.0/i + '\nSearch time: '+ str(end-start) + '\nAverage time: ' +totalTime/i + '\n'
+	toWrite = 'ATTEMPT ' + str(i) +	'\nSolved: ' + str(solved) + '\nAccuracy so far: ' + numSolved*1.0/(i+1) + '\nSearch time: '+ str(end-start) + '\nAverage time: ' +totalTime/(i+1) + '\n'
 	df.write(toWrite)
 	df.close()
 	df = open(dataFileName, 'ab')
