@@ -104,7 +104,6 @@ def createCrossword(size, sortedData, blanks):
 	# Accounts for words that start on grid edges
 	sAcrossBlanks = copy.deepcopy(blanks)
 	sDownBlanks = copy.deepcopy(blanks)
-
 	for i in range(size):
 		if (i,0) not in blanks:
 			sAcrossBlanks.append((i,-1))
@@ -178,6 +177,7 @@ def createCrossword(size, sortedData, blanks):
 		for i in range(length):
 			row = key[0]
 			col = key[1]
+
 			letter = cw.letters[(row+i, col)]
 			letter.downWordLoc = (row, col, 0)
 			letter.downIdx = i
