@@ -8,6 +8,12 @@ from ast import literal_eval as make_tuple
 
 ###-----------------------DATABASE_PROCESSING------------------------###
 
+# Reads in google-10000-english corpus
+def createGoogleDatabase():
+	with open('google-10000-english/google-10000-english-usa.txt') as f:
+		return [line.strip().upper() for line in f]
+
+
 # Reads in NYT clues and answers and stores in 'database'
 def createClueDatabase():
 	database = []
@@ -213,7 +219,7 @@ def addAssignmentsToGrid(cw, assignments):
 			assignLetter(cw, cw.letters[keyTup], assignments[key])
 		else:
 			assignWord(cw, cw.words[keyTup], assignments[key])
-		
+
 
 # Constraint Propogation upon the assignment of a Word variable word
 def propogateWordAssignment(csp, word):
