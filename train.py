@@ -15,9 +15,9 @@ start = timeit.default_timer()
 
 #Globals
 cwSize = 9
-numFeatures = 70
-dataFileName = 'testingMidiResults_trial5.txt'
-#weightFileName = 'weights_midi_trial1.txt'
+numFeatures = 6
+dataFileName = 'trainingMidiResults_trial6_delta_weight_scores_500iter_wbw.txt'
+weightFileName = 'weights_midi_trial6_delta_weight_scores_500iter_wbw.txt'
 
 # Process Database
 d = createGoogleDatabase()   #createNYTDatabase
@@ -26,20 +26,11 @@ sortedData = sortDatabase(d, cwSize) #dict where keys are the lengths of the wor
 # Choose crossword grid pattern
 grid = getMidiGrid()
 
-# Get training weights from datafile
-lineNum = 0
-weights = np.matrix([[0.0] * numFeatures]*26)
-for line in open('weights_midi_trial5_delta_weight_scores_500iter.txt'):
-	row = lineNum/numFeatures
-	col = lineNum%numFeatures
-	weights[row,col] = float(line)
-	lineNum += 1
-
 # Create Crossword Object
 #cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
 QLA = QLearningAlgorithm(numFeatures)
-iters = 100
+iters = 500
 numSolved = 0
 temp = datetime.now()
 totalTime = temp-temp
@@ -58,18 +49,28 @@ for i in range(iters):
 
 	print 'In Backtrack Search'
 	search = BacktrackingSearch()
-	solution = search.solve_test(weights, cw, csp, mcv=True, ac3=True)
+	solution, fvs, domainPercentages, assignments, reason = search.solve(cw, csp, mcv=False, ac3=True)
+	print 'Terminated because : ' + reason
 	end = datetime.now()
 	addAssignmentsToGrid(cw, solution)
 
-	print 'Computing Accuracy'
+	print 'Incorporating feedback.'
+	# Compute Puzzle correctness
 	numWordsAssigned = 0
 	for var in solution.keys():
 		if len(make_tuple(var)) > 2:
 			numWordsAssigned += 1
 	solvedPerc = numWordsAssigned*1.0/len(cw.words.keys())
+	QLA.incorporateFeedback(fvs, assignments, domainPercentages, solvedPerc)
+	wf = open(weightFileName, 'wb')
+	for j in range(26):
+		QLA.weights[j].tofile(wf, "\n")
+	wf.close()
 
 	print solution
+	print domainPercentages
+	print solvedPerc
+
 	print cw.grid
 
 	totalTime += (end-start)
@@ -89,6 +90,7 @@ for i in range(iters):
 	df.close()
 	print toWrite
 
+print QLA.weights
 df = open(dataFileName, 'a')
 df.write("Solved "+str(numSolved)+" out of "+str(i+1)+" puzzles \n")
 df.close()

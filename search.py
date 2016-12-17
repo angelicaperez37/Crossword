@@ -1,8 +1,11 @@
 from util import *
 from classes import *
+from feature import *
 import random
 import timeit
+import string
 from random import shuffle
+from ast import literal_eval as make_tuple
 
 class BacktrackingSearch(object):
 	def __init__(self):
@@ -51,7 +54,6 @@ class BacktrackingSearch(object):
 		@return w: Change in weights as a result of the proposed assignment.
 		This will be used as a multiplier on the current weight.
 		"""
-
 		assert var not in assignment
 		w = 1.0
 		if self.csp.unaryFactors[var]:
@@ -63,7 +65,79 @@ class BacktrackingSearch(object):
 			if w == 0:	return w
 		return w
 
-	def solve(self, csp, mcv = False, ac3 = False):
+	def get_score_test(self, assignment, var, val, weights):
+		if len(make_tuple(var)) > 2:	return self.get_delta_weight(assignment, var, val)
+		w = weights[string.ascii_uppercase.index(val)]
+		fv = self.featureExtractor.extract(self.csp, self.cw, self.cw.letters[make_tuple(var)], val)
+		fv_vals = [feat[1] for feat in fv]
+		vec = np.multiply(w, fv_vals)
+		return np.linalg.norm(vec)
+
+	def get_score(self, assignment, var, val):
+
+		tempDomains = {}
+		for key in self.domains.keys():
+			tempDomains[key] = copy.deepcopy(self.domains[key])
+		tempDomains[var] = [val]
+
+		# score based on magnitudes of domains after propogation
+		cumulativeScore = 0.0
+		totalSamples = 0
+		q = []
+		checked = []
+		q.append(var)
+		while(len(q) > 0):
+			curVar = q.pop(0)
+			checked.append(curVar)
+			domainCurVar = tempDomains[curVar]
+			if len(domainCurVar) == 0:
+					continue
+
+			# Iterate through neighbors(overlapping Letter/Word vars) of curVar
+			for var2 in self.csp.get_neighbor_vars(curVar):
+				totalDomain = 0
+				numValidDomain = 0
+				domainVar2 = tempDomains[var2]
+
+				#print 'Comparing '+str(var)+ ' to '+str(var2)+'.'
+				#print str(var2) + ' has domain of size ' + str(len(domainVar2))
+
+				for b in domainVar2:
+
+
+					bPossible = 0
+					#if self.csp.binaryFactors[curVar][var2] is not None:
+					for a in domainCurVar:
+
+						#print 'Var1 val: '+str(a)
+						#print 'Var2 val: '+str(b)
+
+						if self.csp.binaryFactors[curVar][var2][a][b] > 0:
+							bPossible = 1
+							break
+
+					totalDomain += 1
+					if bPossible != 0:
+						numValidDomain += 1
+					else:
+						domainVar2.remove(b)
+
+				#print 'totalDomain size: '+ str(totalDomain )
+
+				#print 'Found ' + str(numValidDomain) + ' valid values out of ' + str(totalDomain)
+
+				if var2 not in checked and var2 not in q:
+					q.append(var2)
+				if totalDomain > 0:
+					cumulativeScore += numValidDomain*1.0/totalDomain
+
+					#print 'Added sample with score of ' + str(numValidDomain*1.0/totalDomain)
+
+					totalSamples += 1
+				if totalSamples == 0:	return cumulativeScore
+		return cumulativeScore / totalSamples
+
+	def solve(self, cw, csp, mcv = False, ac3 = False):
 		"""
 		Solves the given weighted CSP using heuristics as specified in the
 		parameter. Note that unlike a typical unweighted CSP where the search
@@ -78,14 +152,215 @@ class BacktrackingSearch(object):
 		of a variable made.
 		"""
 
+		self.cw = cw
 		self.csp = csp
 		self.mcv = mcv
 		self.ac3 = ac3
+		self.reason = 'No reason.'
+		self.explorationProb = 0.2
+		self.featureVectors = {}
+		self.domainPercentages = {}
+		self.assignments = {}
+		self.featureExtractor = CSPFeatureExtractor()
 		#self.reset_results()
 		self.domains = {var: list(self.csp.values[var]) for var in self.csp.variables}
-		solution = self.backtrack({}, 0,1)
-		return solution
+		solution = self.backtrack_wbw({}, 0,1)
+		return (solution, self.featureVectors, self.domainPercentages, self.assignments, self.reason)
 		#self.print_stats()
+
+	def solve_test(self, weights, cw, csp, mcv = False, ac3 = False):
+		self.cw = cw
+		self.csp = csp
+		self.mcv = mcv
+		self.ac3 = ac3
+		self.featureExtractor = CSPFeatureExtractor()
+		self.weights = weights
+		#self.reset_results()
+		self.domains = {var: list(self.csp.values[var]) for var in self.csp.variables}
+
+		# add seed word to ensure variety
+		seedVar = None
+		for var in self.csp.variables:
+			if len(make_tuple(var)) > 2:
+				seedVar = var
+				break
+		seedAssignment = self.domains[seedVar][random.randint(0,len(self.domains[seedVar])-1)]
+		self.domains[seedVar] = [seedAssignment]
+		self.csp.values[seedVar] = [seedAssignment]
+		varsAssigned = self.arc_consistency_check(seedVar)
+
+		solution = self.backtrack_test({seedVar: seedAssignment}, 1, weights)
+		return solution
+
+	def backtrack_test(self, assignment, numAssigned, weights):
+		self.numOperations += 1
+		if numAssigned == self.csp.numVars: # or 0 in domainSizes:
+			# Solution found
+			self.numAssignments += 1
+			newAssignment = {}
+			for var in self.csp.variables:
+				newAssignment[var] = assignment[var]
+			return newAssignment
+
+		# Select next variable to be assigned
+		var = self.get_unassigned_variable(assignment)
+		if var == None:
+			return copy.deepcopy(assignment)
+
+		# Get an ordering of the values.
+		shuffle(self.domains[var])
+		ordered_values = self.domains[var]
+
+		# Continue the backtracking recursion using |var| and |ordered_values|
+		if not self.ac3:
+			for val in ordered_values:
+				deltaWeight = self.get_score(assignment, var, val)
+				if deltaWeight > 0:
+					assignment[var] = val
+
+					newAssignment = self.backtrack_test(assignment, numAssigned+1, weight*deltaWeight)
+					del assignment[var]
+					return newAssignment
+		else:
+			# apply heuristic to choose best assignment
+			# and store features for all possible assignments
+			maxScore = float('-inf')
+			maxVal = None
+			varKeyTup = make_tuple(var)
+			for i,val in enumerate(ordered_values):
+				# only check first five random
+				#print 'Computing score for variable ' + str(var) + 'on assignment '+val
+				score = self.get_score_test(assignment, var, val, weights)
+
+				if score > maxScore:
+					maxScore = score
+					maxVal = val
+
+				#print 'score for '+str(val)+': '+str(score)
+				#print 'maxScore: ' + str(maxScore)
+
+			# Choose assignment w/ max score
+			assignment[var] = maxVal
+			#localCopy = copy.deepcopy(self.domains)
+			self.domains[var] = [maxVal]
+			self.csp.values[var] = [maxVal]
+			varsAssigned = self.arc_consistency_check(var)
+			solution = self.backtrack_test(assignment, numAssigned+varsAssigned+1, weights)
+
+			#self.domains = localCopy
+			#del assignment[var]
+			return solution
+		# if no assignment found for variable
+		return copy.deepcopy(assignment)
+
+	def backtrack_wbw(self, assignment, numAssigned, weight):
+		"""
+		Perform the back-tracking algorithm to find a solution to the CSP.
+
+		@param assignment: A dictionary of current assignments. Unassigned
+		variables do not have entries, while an assigned variable has the
+		assigned value as value in the dictionary. e.g. if the domain of the
+		variable A is [5,6], and 6 was assigned to it, then
+		assignment[A] == 6.
+
+		@param numAssigned: Number of currently assigned variables
+		@param weight: The weight of the current partial assignment.
+		"""
+
+		self.numOperations += 1
+		if numAssigned == self.csp.numVars: # or 0 in domainSizes:
+			# Solution found
+			self.numAssignments += 1
+			newAssignment = {}
+			for var in self.csp.variables:
+				newAssignment[var] = assignment[var]
+
+			self.reason = 'Solved.'
+
+			return newAssignment
+
+		# Select next variable to be assigned
+		var = self.get_unassigned_variable_wbw(assignment)
+
+		if var == None:
+			self.reason = 'No more Word variables with unempty domains.'
+			return copy.deepcopy(assignment)
+
+		# Get a random ordering of the values.
+		shuffle(self.domains[var])
+		ordered_values = self.domains[var]
+
+		# Continue the backtracking recursion using |var| and |ordered_values|
+		if not self.ac3:
+			for val in ordered_values:
+				deltaWeight = self.get_score(assignment, var, val)
+				if deltaWeight > 0:
+					assignment[var] = val
+
+					newAssignment = self.backtrack_wbw(assignment, numAssigned+1, weight*deltaWeight)
+					del assignment[var]
+					return newAssignment
+		else:
+			# apply heuristic to choose best assignment
+			# and store features for all possible assignments
+			maxScore = -1.0
+			maxVal = None
+			scores = {}
+			fvInstance = {}
+			varKeyTup = make_tuple(var)
+			for i,val in enumerate(ordered_values):
+				# only check first five random
+				#print 'Computing score for variable ' + str(var) + 'on assignment '+val
+				score = self.get_delta_weight(assignment, var, val)
+				scores[val] = score
+				#print score
+				if score > maxScore:
+					maxScore = score
+					maxVal = val
+
+				# keep track of features
+				if len(varKeyTup) > 2:
+					fvInstance[val] = self.featureExtractor.extract(self.csp, self.cw, self.cw.words[varKeyTup], maxVal)
+			if random.random() < self.explorationProb and len(varKeyTup) > 2:# or maxVal == None:
+				foundValue = False
+				for v in ordered_values:
+					if scores[v] > 0:
+						maxVal = v
+						maxScore = scores[maxVal]
+						foundValue = True
+						break
+				if not foundValue:
+					self.reason = 'Hit dead end.'
+					return copy.deepcopy(assignment)
+
+			# stores all feature vectors for all assignments and all variables
+			# fvInstance holds feature vecs for this instance
+			if len(varKeyTup) > 2:
+				self.featureVectors[numAssigned] = fvInstance
+				self.domainPercentages[numAssigned] = maxScore
+				self.assignments[numAssigned] = maxVal
+				#print 'HERE' + str(varKeyTup) + '\n'
+
+
+			# Choose assignment w/ max score
+			assignment[var] = maxVal
+			#localCopy = copy.deepcopy(self.domains)
+			self.domains[var] = [maxVal]
+			self.csp.values[var] = [maxVal]
+			addAssignmentsToGrid(self.cw, {var: maxVal})
+
+			#print 'Assigned value '+str(maxVal) + ' to variable ' + str(var)
+			#print self.cw.grid
+
+			varsAssigned = self.arc_consistency_check(var)
+			solution = self.backtrack_wbw(assignment, numAssigned+varsAssigned+1, weight)
+
+			#self.domains = localCopy
+			#del assignment[var]
+			return solution
+		# if no assignment found for variable
+		self.reason = 'No solution found.'
+		return copy.deepcopy(assignment)
 
 	def backtrack(self, assignment, numAssigned, weight):
 		"""
@@ -102,22 +377,22 @@ class BacktrackingSearch(object):
 		"""
 
 		self.numOperations += 1
-		#assert weight > 0
-		if numAssigned == self.csp.numVars:
+		if numAssigned == self.csp.numVars: # or 0 in domainSizes:
 			# Solution found
 			self.numAssignments += 1
 			newAssignment = {}
 			for var in self.csp.variables:
 				newAssignment[var] = assignment[var]
-			# self.allAssignments.append(newAssignment)
 
-			# left out part that updates optimalAssignment
-			# if len(self.optimalAssignment) == 0 or weight >=
+			self.reason = 'Solved.'
 
 			return newAssignment
 
 		# Select next variable to be assigned
 		var = self.get_unassigned_variable(assignment)
+		if var == None:
+			self.reason = 'All variables have no domain left.'
+			return copy.deepcopy(assignment)
 
 		# Get an ordering of the values.
 		shuffle(self.domains[var])
@@ -126,28 +401,87 @@ class BacktrackingSearch(object):
 		# Continue the backtracking recursion using |var| and |ordered_values|
 		if not self.ac3:
 			for val in ordered_values:
-				deltaWeight = self.get_delta_weight(assignment, var, val)
+				deltaWeight = self.get_score(assignment, var, val)
 				if deltaWeight > 0:
 					assignment[var] = val
+
 					newAssignment = self.backtrack(assignment, numAssigned+1, weight*deltaWeight)
 					del assignment[var]
 					return newAssignment
 		else:
-			for val in ordered_values:
-				deltaWeight = self.get_delta_weight(assignment, var, val)
-				if deltaWeight > 0:
+			# apply heuristic to choose best assignment
+			# and store features for all possible assignments
+			maxScore = -1.0
+			maxVal = None
+			scores = {}
+			fvInstance = {}
+			varKeyTup = make_tuple(var)
+			for i,val in enumerate(ordered_values):
+				# only check first five random
+				#print 'Computing score for variable ' + str(var) + 'on assignment '+val
+				score = self.get_delta_weight(assignment, var, val)
+				scores[val] = score
+				#print score
+				if score > maxScore:
+					maxScore = score
+					maxVal = val
 
-					assignment[var] = val
-					localCopy = copy.deepcopy(self.domains)
-					self.domains[var] = [val]
-					varsAssigned = self.arc_consistency_check(var)
-					solution = self.backtrack(assignment, numAssigned+varsAssigned+1, weight*deltaWeight)
+				# keep track of features
+				if len(varKeyTup) == 2:
+					fvInstance[val] = self.featureExtractor.extract(self.csp, self.cw, self.cw.letters[varKeyTup], maxVal)
+			if random.random() < self.explorationProb and len(varKeyTup) == 2:# or maxVal == None:
+				foundValue = False
+				for v in ordered_values:
+					if scores[v] > 0:
+						maxVal = v
+						maxScore = scores[maxVal]
+						foundValue = True
+						break
+				if not foundValue:
+					self.reason = 'Hit dead end.'
+					return copy.deepcopy(assignment)
 
-					self.domains = localCopy
-					del assignment[var]
-					return solution
-			# if no assignment found for variable
-			return copy.deepcopy(assignment)
+			# stores all feature vectors for all assignments and all variables
+			# fvInstance holds feature vecs for this instance
+			self.featureVectors[numAssigned] = fvInstance
+			self.domainPercentages[numAssigned] = maxScore
+			self.assignments[numAssigned] = maxVal
+			#print 'HERE' + str(varKeyTup) + '\n'
+
+
+			# Choose assignment w/ max score
+			assignment[var] = maxVal
+			#localCopy = copy.deepcopy(self.domains)
+			self.domains[var] = [maxVal]
+			self.csp.values[var] = [maxVal]
+			addAssignmentsToGrid(self.cw, {var: maxVal})
+
+			#print 'Assigned value '+str(maxVal) + ' to variable ' + str(var)
+			#print self.cw.grid
+
+			varsAssigned = self.arc_consistency_check(var)
+			solution = self.backtrack(assignment, numAssigned+varsAssigned+1, weight)
+
+			#self.domains = localCopy
+			#del assignment[var]
+			return solution
+		# if no assignment found for variable
+		self.reason = 'No solution found.'
+		return copy.deepcopy(assignment)
+
+	def get_unassigned_variable_wbw(self, assignment):
+		"""
+		Given a partial assignment, return a currently unassigned variable.
+
+		@param assignment: A dictionary of current assignment.
+		@return var: a currently unassigned variable
+		"""
+		for v in self.csp.variables:
+			if len(make_tuple(v)) > 2:
+				if len(self.domains[v]) > 0 and v not in assignment:
+					return v
+		return None
+
 
 	def get_unassigned_variable(self, assignment):
 		"""
@@ -156,24 +490,28 @@ class BacktrackingSearch(object):
 		@param assignment: A dictionary of current assignment.
 		@return var: a currently unassigned variable
 		"""
+		for v in self.csp.variables:
+			if len(self.domains[v]) > 0 and v not in assignment:
+				return v
+		return None
 
 		if not self.mcv:
 			# Select a variable without any heuristicss
 			for var in self.csp.variables:
 				if var not in assignment:	return var
-			else:
-				minVals = float("inf")
-				minVar = float("inf")
-				for var in self.csp.variables:
-					if var not in assignment.keys():
-						numVals = 0
-						for a in self.domains[var]:
-							if self.get_delta_weight(assignment, var, a) > 0:
-								numVals += 1
-						if numVals < minVals:
-							minVals = numVals
-							minVar = var
-				return minVar
+		else:
+			minVals = float("inf")
+			minVar = float("inf")
+			for var in self.csp.variables:
+				if var not in assignment.keys():
+					numVals = 0
+					for a in self.domains[var]:
+						if self.get_delta_weight(assignment, var, a) > 0:
+							numVals += 1
+					if numVals < minVals:
+						minVals = numVals
+						minVar = var
+			return minVar
 
 	def arc_consistency_check(self, var):
 		"""
@@ -182,11 +520,13 @@ class BacktrackingSearch(object):
 
 		@param var: The variable whose value has just been set.
 		"""
+
 		numAssigned = 0
 		q = []
 		q.append(var)
 		while(len(q) > 0):
 			curVar = q.pop(0)
+
 			domainCurVar = copy.deepcopy(self.domains[curVar])
 			if len(domainCurVar) == 0:
 				continue
@@ -208,6 +548,12 @@ class BacktrackingSearch(object):
 					bPossible = 0
 					#if self.csp.binaryFactors[curVar][var2] is not None:
 					for a in domainCurVar:
+
+						#print curVar
+						#print var2
+						#print a
+						#print b
+
 						if self.csp.binaryFactors[curVar][var2][a][b] > 0:
 							bPossible = 1
 							break
@@ -215,6 +561,7 @@ class BacktrackingSearch(object):
 						self.domains[var2].remove(b)
 						if var2 not in q:
 							q.append(var2)
+
 		return numAssigned
 
 

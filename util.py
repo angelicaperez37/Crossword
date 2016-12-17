@@ -192,7 +192,7 @@ def createCrossword(size, sortedData, blanks):
 
 	return cw
 
-def assignWord(csp, word, assignment):
+def assignWord(cw, word, assignment):
 	# assign word
 	word.assigned = True
 	word.assignment = assignment
@@ -203,7 +203,7 @@ def assignWord(csp, word, assignment):
 		gridCol = word.startLoc[1]
 		if word.across:	gridCol += i
 		else:	gridRow += i
-		csp.grid[gridRow,gridCol] = assignment[i]
+		cw.grid[gridRow,gridCol] = assignment[i]
 
 def assignLetter(cw, letter, assignment):
 	letter.assigned = True

@@ -1,0 +1,601 @@
+
+ATTEMPT 1
+Accuracy: 0.708333333333
+Accuracy so far: 0.708333333333
+Search time: 0:00:00.859940
+Average time: 0:00:00.859940
+'*' '*' 'P' 'A' 'C' 'K' 'S' '*' '*' '*' 'T' 'A' 'C' 'T' 'I' 'C' 'S' '*' 'P' 'H' 'O' 'T' 'O' 'S' 'H' 'O' 'P' 'L' 'O' 'S' 'S' '*' 'S' 'E' 'A' 'L' 'A' 'U' 'S' '*' '*' '*' 'D' 'N' 'A' 'N' 'G' 'I' 'S' '*' 'Q' 'U' 'I' 'Z' 'S' 'H' 'O' 'P' 'Z' 'I' 'L' 'L' 'A' '*' 'T' 'U' 'E' 'E' 'E' 'E' 'E' '*' '*' '*' 'E' 'C' 'N' 'E' 'S' '*' '*'
+ATTEMPT 2
+Accuracy: 0.708333333333
+Accuracy so far: 0.708333333333
+Search time: 0:00:05.166965
+Average time: 0:00:03.013452
+'*' '*' 'V' 'O' 'T' 'E' 'D' '*' '*' '*' 'S' 'O' 'N' 'E' 'T' 'O' 'R' '*' 'V' 'O' 'Y' 'E' 'U' 'R' 'W' 'E' 'B' 'O' 'N' 'E' 'S' '*' 'O' 'N' 'T' 'O' 'T' 'A' 'U' '*' '*' '*' 'L' 'E' 'N' 'E' 'T' 'R' 'I' '*' 'D' 'O' 'S' 'E' 'D' 'O' 'W' 'N' 'L' 'O' 'A' 'D' 'S' '*' 'S' 'E' 'C' 'O' 'N' 'D' 'S' '*' '*' '*' 'B' 'L' 'U' 'E' 'S' '*' '*'
+ATTEMPT 3
+Accuracy: 0.75
+Accuracy so far: 0.722222222222
+Search time: 0:00:06.391814
+Average time: 0:00:04.139573
+'*' '*' 'C' 'M' 'E' 'M' 'R' '*' '*' '*' 'T' 'H' 'E' 'R' 'E' 'O' 'F' '*' 'S' 'E' 'A' 'T' 'A' 'S' 'L' 'I' 'C' 'P' 'A' 'R' 'A' '*' 'H' 'I' 'G' 'H' 'A' 'C' 'L' '*' '*' '*' 'G' 'U' 'I' 'A' 'H' 'O' 'D' '*' 'G' 'I' 'R' 'L' 'R' 'E' 'T' 'R' 'I' 'E' 'V' 'E' 'D' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'E' 'V' 'A' 'K' 'S' '*' '*'
+ATTEMPT 4
+Accuracy: 0.708333333333
+Accuracy so far: 0.71875
+Search time: 0:00:07.762144
+Average time: 0:00:05.045215
+'*' '*' 'S' 'L' 'A' 'R' 'A' '*' '*' '*' 'R' 'U' 'U' 'I' 'E' 'R' 'S' '*' 'D' 'E' 'S' 'C' 'R' 'I' 'B' 'E' 'S' 'R' 'A' 'P' 'E' '*' 'D' 'I' 'R' 'T' 'L' 'I' 'E' '*' '*' '*' 'T' 'E' 'E' 'H' 'O' 'C' 'M' '*' 'P' 'R' 'E' 'V' 'I' 'N' 'T' 'E' 'G' 'R' 'A' 'T' 'E' '*' 'S' 'E' 'E' 'K' 'E' 'R' 'S' '*' '*' '*' 'D' 'T' 'U' 'D' 'Y' '*' '*'
+ATTEMPT 5
+Accuracy: 0.75
+Accuracy so far: 0.725
+Search time: 0:00:06.158351
+Average time: 0:00:05.267842
+'*' '*' 'E' 'A' 'E' 'S' 'S' '*' '*' '*' 'C' 'O' 'R' 'S' 'H' 'I' 'P' '*' 'E' 'A' 'E' 'C' 'T' 'O' 'R' 'A' 'L' 'H' 'S' 'E' 'H' '*' 'W' 'A' 'R' 'E' 'E' 'I' 'E' '*' '*' '*' 'S' 'E' 'X' 'A' 'N' 'E' 'S' '*' 'M' 'E' 'N' 'U' 'P' 'O' 'R' 'T' 'R' 'A' 'I' 'T' 'S' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'S' 'P' 'A' 'R' 'C' '*' '*'
+ATTEMPT 6
+Accuracy: 0.833333333333
+Accuracy so far: 0.743055555556
+Search time: 0:00:07.960620
+Average time: 0:00:05.716639
+'*' '*' 'A' 'R' 'A' 'L' 'T' '*' '*' '*' 'P' 'R' 'E' 'P' 'A' 'R' 'E' '*' 'T' 'R' 'E' 'A' 'T' 'M' 'E' 'N' 'T' 'R' 'E' 'A' 'R' '*' 'B' 'A' 'L' 'I' 'E' 'S' 'T' '*' '*' '*' 'S' 'E' 'T' 'N' 'A' 'S' 'A' '*' 'D' 'U' 'A' 'L' 'D' 'I' 'S' 'C' 'H' 'A' 'R' 'G' 'E' '*' 'T' 'R' 'E' 'A' 'T' 'E' 'D' '*' '*' '*' 'O' 'R' 'D' 'E' 'R' '*' '*'
+ATTEMPT 7
+Accuracy: 0.791666666667
+Accuracy so far: 0.75
+Search time: 0:00:06.702089
+Average time: 0:00:05.857417
+'*' '*' 'P' 'E' 'R' 'T' 'H' '*' '*' '*' 'A' 'L' 'A' 'E' 'R' 'E' 'A' '*' 'V' 'E' 'A' 'R' 'S' 'E' 'A' 'A' 'U' 'I' 'N' 'T' 'L' '*' 'E' 'D' 'E' 'N' 'R' 'E' 'F' '*' '*' '*' 'L' 'E' 'T' 'A' 'T' 'O' 'M' '*' 'M' 'I' 'D' 'I' 'L' 'E' 'R' 'E' 'R' 'P' 'N' 'E' 'L' '*' 'A' 'M' 'E' 'N' 'D' 'E' 'D' '*' '*' '*' 'S' 'T' 'A' 'G' 'S' '*' '*'
+ATTEMPT 8
+Accuracy: 0.666666666667
+Accuracy so far: 0.739583333333
+Search time: 0:00:05.109219
+Average time: 0:00:05.763892
+'*' '*' 'A' 'E' 'A' 'E' 'M' '*' '*' '*' 'E' 'O' 'D' 'P' 'E' 'A' 'S' '*' 'I' 'N' 'T' 'E' 'R' 'V' 'I' 'E' 'W' 'M' 'A' 'I' 'N' '*' 'A' 'N' 'N' 'E' 'A' 'T' 'M' '*' '*' '*' 'T' 'E' 'L' 'G' 'E' 'A' 'R' '*' 'P' 'A' 'S' 'S' 'E' 'S' 'T' 'A' 'B' 'L' 'I' 'S' 'H' '*' 'S' 'E' 'R' 'E' 'O' 'N' 'E' '*' '*' '*' 'D' 'E' 'E' 'T' 'S' '*' '*'
+ATTEMPT 9
+Accuracy: 0.708333333333
+Accuracy so far: 0.736111111111
+Search time: 0:00:08.176070
+Average time: 0:00:06.031912
+'*' '*' 'C' 'R' 'S' 'W' 'D' '*' '*' '*' 'D' 'E' 'C' 'I' 'D' 'E' 'D' '*' 'T' 'E' 'R' 'N' 'E' 'S' 'S' 'E' 'E' 'O' 'V' 'T' 'E' '*' 'M' 'I' 'L' 'D' 'P' 'E' 'A' '*' '*' '*' 'R' 'E' 'G' 'I' 'L' 'I' 'E' '*' 'D' 'A' 'T' 'A' 'C' 'O' 'N' 'V' 'E' 'R' 'T' 'E' 'R' '*' 'P' 'L' 'E' 'A' 'A' 'L' 'D' '*' '*' '*' 'Y' 'R' 'U' 'G' 'E' '*' '*'
+ATTEMPT 10
+Accuracy: 0.791666666667
+Accuracy so far: 0.741666666667
+Search time: 0:00:09.369086
+Average time: 0:00:06.365629
+'*' '*' 'C' 'L' 'I' 'M' 'B' '*' '*' '*' 'C' 'E' 'E' 'S' 'A' 'E' 'A' '*' 'S' 'A' 'A' 'A' 'A' 'R' 'N' 'N' 'S' 'E' 'S' 'P' 'N' '*' 'S' 'E' 'G' 'A' 'T' 'I' 'E' '*' '*' '*' 'R' 'E' 'V' 'U' 'N' 'T' 'O' '*' 'M' 'A' 'L' 'E' 'P' 'O' 'L' 'Y' 'E' 'S' 'T' 'E' 'R' '*' 'S' 'P' 'E' 'C' 'I' 'E' 'S' '*' '*' '*' 'D' 'R' 'O' 'E' 'S' '*' '*'
+ATTEMPT 11
+Accuracy: 0.75
+Accuracy so far: 0.742424242424
+Search time: 0:00:04.708512
+Average time: 0:00:06.214982
+'*' '*' 'M' 'A' 'I' 'N' 'E' '*' '*' '*' 'P' 'O' 'S' 'S' 'E' 'D' 'E' '*' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' 'O' 'R' 'E' 'A' '*' 'S' 'T' 'U' 'D' 'O' 'I' 'L' '*' '*' '*' 'O' 'N' 'E' 'R' 'O' 'L' 'S' '*' 'A' 'R' 'E' 'A' 'E' 'D' 'I' 'T' 'O' 'R' 'I' 'A' 'L' '*' 'S' 'N' 'A' 'N' 'E' 'A' 'S' '*' '*' '*' 'G' 'R' 'E' 'A' 'L' '*' '*'
+ATTEMPT 12
+Accuracy: 0.75
+Accuracy so far: 0.743055555556
+Search time: 0:00:05.777059
+Average time: 0:00:06.178489
+'*' '*' 'S' 'O' 'N' 'I' 'C' '*' '*' '*' 'G' 'E' 'N' 'E' 'R' 'I' 'C' '*' 'R' 'A' 'A' 'L' 'T' 'A' 'G' 'I' 'C' 'E' 'B' 'A' 'Y' '*' 'N' 'A' 'T' 'O' 'F' 'R' 'I' '*' '*' '*' 'R' 'A' 'M' 'E' 'I' 'I' 'C' '*' 'M' 'E' 'U' 'I' 'R' 'E' 'A' 'O' 'M' 'A' 'T' 'I' 'C' '*' 'L' 'E' 'L' 'A' 'U' 'T' 'T' '*' '*' '*' 'E' 'D' 'D' 'I' 'E' '*' '*'
+ATTEMPT 13
+Accuracy: 0.791666666667
+Accuracy so far: 0.746794871795
+Search time: 0:00:04.337787
+Average time: 0:00:06.036896
+'*' '*' 'P' 'R' 'I' 'N' 'T' '*' '*' '*' 'P' 'R' 'E' 'A' 'O' 'H' 'A' '*' 'P' 'L' 'A' 'I' 'N' 'T' 'I' 'F' 'F' 'O' 'E' 'C' 'D' '*' 'E' 'C' 'F' 'A' 'L' 'A' 'T' '*' '*' '*' 'K' 'A' 'I' 'A' 'S' 'I' 'N' '*' 'I' 'N' 'C' 'L' 'R' 'E' 'C' 'O' 'R' 'D' 'E' 'R' 'S' '*' 'D' 'E' 'S' 'E' 'L' 'S' 'E' '*' '*' '*' 'S' 'E' 'V' 'E' 'S' '*' '*'
+ATTEMPT 14
+Accuracy: 0.708333333333
+Accuracy so far: 0.744047619048
+Search time: 0:00:06.667707
+Average time: 0:00:06.081954
+'*' '*' 'W' 'L' 'E' 'K' 'S' '*' '*' '*' 'S' 'E' 'E' 'A' 'N' 'O' 'F' '*' 'A' 'U' 'S' 'T' 'R' 'A' 'L' 'I' 'A' 'L' 'C' 'T' 'S' '*' 'P' 'E' 'N' 'N' 'A' 'C' 'E' '*' '*' '*' 'M' 'A' 'I' 'R' 'E' 'S' 'C' '*' 'C' 'A' 'L' 'M' 'M' 'E' 'A' 'N' 'W' 'H' 'I' 'L' 'E' '*' 'D' 'L' 'E' 'A' 'A' 'E' 'Y' '*' '*' '*' 'E' 'T' 'R' 'R' 'E' '*' '*'
+ATTEMPT 15
+Accuracy: 0.791666666667
+Accuracy so far: 0.747222222222
+Search time: 0:00:05.670522
+Average time: 0:00:06.054525
+'*' '*' 'T' 'O' 'I' 'K' 'E' '*' '*' '*' 'F' 'O' 'R' 'M' 'U' 'L' 'A' '*' 'P' 'A' 'R' 'A' 'G' 'R' 'A' 'P' 'H' 'I' 'N' 'C' 'L' '*' 'T' 'A' 'P' 'E' 'T' 'H' 'E' '*' '*' '*' 'S' 'E' 'A' 'T' 'E' 'L' 'D' '*' 'S' 'T' 'A' 'R' 'C' 'R' 'O' 'S' 'S' 'W' 'O' 'R' 'D' '*' 'S' 'P' 'E' 'C' 'I' 'E' 'S' '*' '*' '*' 'A' 'S' 'I' 'M' 'E' '*' '*'
+ATTEMPT 16
+Accuracy: 0.708333333333
+Accuracy so far: 0.744791666667
+Search time: 0:00:06.805882
+Average time: 0:00:06.101485
+'*' '*' 'P' 'A' 'S' 'T' 'A' '*' '*' '*' 'I' 'R' 'U' 'S' 'E' 'S' 'M' '*' 'I' 'E' 'I' 'T' 'L' 'A' 'S' 'A' 'Q' 'S' 'E' 'S' 'O' '*' 'M' 'E' 'N' 'U' 'A' 'I' 'O' '*' '*' '*' 'M' 'A' 'I' 'A' 'C' 'N' 'E' '*' 'H' 'U' 'G' 'E' 'C' 'H' 'E' 'V' 'R' 'O' 'L' 'E' 'T' '*' 'T' 'R' 'E' 'A' 'T' 'E' 'D' '*' '*' '*' 'S' 'R' 'M' 'E' 'D' '*' '*'
+ATTEMPT 17
+Accuracy: 0.666666666667
+Accuracy so far: 0.740196078431
+Search time: 0:00:05.289749
+Average time: 0:00:06.053736
+'*' '*' 'C' 'R' 'N' 'T' 'A' '*' '*' '*' 'T' 'H' 'E' 'O' 'R' 'E' 'M' '*' 'S' 'U' 'R' 'A' 'T' 'A' 'T' 'I' 'C' 'P' 'I' 'I' 'R' '*' 'P' 'E' 'N' 'U' 'A' 'T' 'I' '*' '*' '*' 'E' 'U' 'R' 'R' 'I' 'R' 'S' '*' 'H' 'D' 'T' 'V' 'C' 'O' 'M' 'M' 'I' 'T' 'T' 'E' 'E' '*' 'N' 'E' 'T' 'D' 'M' 'A' 'S' '*' '*' '*' 'S' 'P' 'E' 'L' 'L' '*' '*'
+ATTEMPT 18
+Accuracy: 0.833333333333
+Accuracy so far: 0.74537037037
+Search time: 0:00:03.776163
+Average time: 0:00:05.927204
+'*' '*' 'L' 'E' 'O' 'N' 'E' '*' '*' '*' 'S' 'T' 'A' 'R' 'T' 'U' 'P' '*' 'T' 'H' 'E' 'R' 'G' 'S' 'E' 'R' 'G' 'O' 'A' 'K' 'S' '*' 'C' 'H' 'A' 'R' 'K' 'D' 'E' '*' '*' '*' 'R' 'I' 'O' 'Y' 'O' 'U' 'R' '*' 'M' 'E' 'R' 'U' 'O' 'W' 'N' 'E' 'R' 'S' 'H' 'I' 'P' '*' 'S' 'U' 'N' 'R' 'I' 'S' 'E' '*' '*' '*' 'H' 'O' 'P' 'E' 'S' '*' '*'
+ATTEMPT 19
+Accuracy: 0.708333333333
+Accuracy so far: 0.743421052632
+Search time: 0:00:05.752046
+Average time: 0:00:05.917985
+'*' '*' 'T' 'R' 'U' 'T' 'H' '*' '*' '*' 'T' 'R' 'U' 'S' 'T' 'E' 'E' '*' 'G' 'U' 'A' 'T' 'E' 'M' 'A' 'L' 'A' 'I' 'N' 'C' 'H' '*' 'P' 'R' 'E' 'V' 'R' 'E' 'S' '*' '*' '*' 'E' 'C' 'O' 'L' 'A' 'B' 'S' '*' 'A' 'N' 'T' 'I' 'S' 'U' 'S' 'T' 'E' 'N' 'N' 'E' 'D' '*' 'T' 'R' 'U' 'S' 'T' 'E' 'D' '*' '*' '*' 'E' 'D' 'G' 'E' 'S' '*' '*'
+ATTEMPT 20
+Accuracy: 0.708333333333
+Accuracy so far: 0.741666666667
+Search time: 0:00:07.514380
+Average time: 0:00:05.997805
+'*' '*' 'C' 'C' 'M' 'R' 'A' '*' '*' '*' 'A' 'R' 'O' 'P' 'E' 'E' 'D' '*' 'S' 'T' 'E' 'P' 'H' 'A' 'N' 'I' 'E' 'E' 'B' 'A' 'Y' '*' 'D' 'I' 'V' 'X' 'V' 'A' 'T' '*' '*' '*' 'S' 'E' 'A' 'E' 'A' 'U' 'S' '*' 'M' 'A' 'R' 'C' 'N' 'O' 'R' 'T' 'H' 'E' 'A' 'S' 'T' '*' 'T' 'E' 'E' 'N' 'A' 'G' 'E' '*' '*' '*' 'S' 'T' 'Y' 'L' 'E' '*' '*'
+ATTEMPT 21
+Accuracy: 0.708333333333
+Accuracy so far: 0.740079365079
+Search time: 0:00:09.508713
+Average time: 0:00:06.164991
+'*' '*' 'B' 'R' 'U' 'S' 'H' '*' '*' '*' 'S' 'L' 'A' 'R' 'T' 'U' 'P' '*' 'S' 'E' 'O' 'I' 'I' 'E' 'E' 'R' 'S' 'O' 'N' 'O' 'D' '*' 'D' 'R' 'E' 'W' 'N' 'A' 'M' '*' '*' '*' 'I' 'S' 'O' 'I' 'O' 'B' 'E' '*' 'A' 'C' 'E' 'R' 'C' 'L' 'E' 'V' 'E' 'L' 'A' 'N' 'D' '*' 'E' 'R' 'E' 'G' 'A' 'N' 'T' '*' '*' '*' 'G' 'R' 'A' 'N' 'S' '*' '*'
+ATTEMPT 22
+Accuracy: 0.708333333333
+Accuracy so far: 0.738636363636
+Search time: 0:00:05.247727
+Average time: 0:00:06.123297
+'*' '*' 'V' 'O' 'T' 'E' 'D' '*' '*' '*' 'R' 'E' 'U' 'N' 'I' 'O' 'N' '*' 'V' 'O' 'Y' 'E' 'U' 'R' 'W' 'E' 'B' 'O' 'N' 'E' 'S' '*' 'O' 'N' 'T' 'O' 'T' 'O' 'O' '*' '*' '*' 'L' 'E' 'O' 'E' 'U' 'R' 'O' '*' 'B' 'O' 'O' 'B' 'D' 'O' 'W' 'N' 'L' 'O' 'A' 'D' 'S' '*' 'S' 'E' 'C' 'O' 'N' 'D' 'S' '*' '*' '*' 'S' 'E' 'S' 'E' 'S' '*' '*'
+ATTEMPT 23
+Accuracy: 0.75
+Accuracy so far: 0.739130434783
+Search time: 0:00:05.357272
+Average time: 0:00:06.089992
+'*' '*' 'B' 'E' 'A' 'R' 'S' '*' '*' '*' 'B' 'E' 'R' 'N' 'A' 'R' 'D' '*' 'P' 'L' 'A' 'I' 'N' 'T' 'I' 'F' 'F' 'O' 'A' 'U' 'K' '*' 'S' 'T' 'A' 'R' 'E' 'N' 'T' '*' '*' '*' 'E' 'R' 'A' 'S' 'K' 'I' 'P' '*' 'I' 'T' 'E' 'M' 'D' 'E' 'F' 'E' 'N' 'S' 'I' 'V' 'E' '*' 'T' 'U' 'T' 'E' 'L' 'O' 'E' '*' '*' '*' 'L' 'E' 'T' 'E' 'T' '*' '*'
+ATTEMPT 24
+Accuracy: 0.833333333333
+Accuracy so far: 0.743055555556
+Search time: 0:00:06.522659
+Average time: 0:00:06.108019
+'*' '*' 'C' 'A' 'A' 'S' 'E' '*' '*' '*' 'P' 'O' 'L' 'T' 'I' 'A' 'L' '*' 'F' 'U' 'N' 'T' 'A' 'S' 'T' 'I' 'C' 'A' 'R' 'S' 'O' '*' 'B' 'A' 'B' 'E' 'D' 'S' 'E' '*' '*' '*' 'T' 'E' 'L' 'E' 'U' 'N' 'S' '*' 'K' 'A' 'R' 'L' 'D' 'I' 'S' 'T' 'R' 'I' 'C' 'T' 'S' '*' 'T' 'U' 'E' 'S' 'D' 'A' 'Y' '*' '*' '*' 'S' 'W' 'I' 'S' 'S' '*' '*'
+ATTEMPT 25
+Accuracy: 0.791666666667
+Accuracy so far: 0.745
+Search time: 0:00:03.616760
+Average time: 0:00:06.008369
+'*' '*' 'T' 'W' 'I' 'C' 'E' '*' '*' '*' 'S' 'A' 'A' 'S' 'A' 'X' 'E' '*' 'P' 'E' 'T' 'R' 'O' 'L' 'E' 'U' 'M' 'R' 'A' 'I' 'D' '*' 'M' 'R' 'N' 'A' 'O' 'R' 'G' '*' '*' '*' 'C' 'A' 'R' 'O' 'U' 'R' 'S' '*' 'M' 'I' 'N' 'I' 'F' 'R' 'A' 'N' 'C' 'I' 'S' 'C' 'O' '*' 'P' 'L' 'A' 'N' 'N' 'E' 'D' '*' '*' '*' 'S' 'P' 'O' 'T' 'S' '*' '*'
+ATTEMPT 26
+Accuracy: 0.666666666667
+Accuracy so far: 0.741987179487
+Search time: 0:00:07.038804
+Average time: 0:00:06.048001
+'*' '*' 'C' 'L' 'I' 'M' 'B' '*' '*' '*' 'S' 'E' 'E' 'S' 'E' 'E' 'S' '*' 'S' 'T' 'R' 'A' 'T' 'E' 'G' 'I' 'C' 'E' 'Y' 'E' 'D' '*' 'M' 'I' 'N' 'I' 'A' 'L' 'I' '*' '*' '*' 'N' 'A' 'V' 'T' 'I' 'T' 'S' '*' 'A' 'N' 'T' 'I' 'E' 'S' 'S' 'E' 'N' 'T' 'I' 'A' 'L' '*' 'H' 'E' 'E' 'O' 'E' 'N' 'D' '*' '*' '*' 'A' 'M' 'O' 'N' 'G' '*' '*'
+ATTEMPT 27
+Accuracy: 0.791666666667
+Accuracy so far: 0.743827160494
+Search time: 0:00:07.872346
+Average time: 0:00:06.115569
+'*' '*' 'C' 'L' 'E' 'A' 'R' '*' '*' '*' 'C' 'R' 'E' 'A' 'T' 'E' 'S' '*' 'C' 'H' 'E' 'V' 'R' 'O' 'L' 'E' 'T' 'R' 'I' 'A' 'Y' '*' 'M' 'E' 'N' 'U' 'I' 'N' 'T' '*' '*' '*' 'L' 'A' 'B' 'M' 'E' 'I' 'D' '*' 'F' 'A' 'T' 'E' 'E' 'S' 'T' 'I' 'M' 'A' 'T' 'E' 'S' '*' 'E' 'N' 'E' 'M' 'I' 'E' 'S' '*' '*' '*' 'S' 'T' 'A' 'R' 'S' '*' '*'
+ATTEMPT 28
+Accuracy: 0.666666666667
+Accuracy so far: 0.741071428571
+Search time: 0:00:06.773586
+Average time: 0:00:06.139070
+'*' '*' 'E' 'R' 'A' 'N' 'S' '*' '*' '*' 'M' 'E' 'A' 'S' 'A' 'R' 'E' '*' 'M' 'A' 'C' 'I' 'N' 'T' 'O' 'S' 'H' 'U' 'S' 'E' 'D' '*' 'O' 'N' 'T' 'O' 'A' 'S' 'N' '*' '*' '*' 'S' 'A' 'P' 'S' 'I' 'M' 'S' '*' 'P' 'E' 'T' 'E' 'I' 'N' 'I' 'T' 'I' 'A' 'T' 'E' 'D' '*' 'E' 'N' 'E' 'S' 'S' 'E' 'S' '*' '*' '*' 'E' 'M' 'A' 'O' 'D' '*' '*'
+ATTEMPT 29
+Accuracy: 0.833333333333
+Accuracy so far: 0.744252873563
+Search time: 0:00:07.481857
+Average time: 0:00:06.185373
+'*' '*' 'I' 'D' 'E' 'A' 'S' '*' '*' '*' 'C' 'R' 'E' 'A' 'T' 'E' 'D' '*' 'E' 'L' 'E' 'C' 'T' 'O' 'R' 'A' 'L' 'L' 'O' 'O' 'K' '*' 'M' 'I' 'N' 'I' 'I' 'S' 'A' '*' '*' '*' 'O' 'A' 'K' 'A' 'U' 'D' 'I' '*' 'C' 'U' 'T' 'E' 'E' 'R' 'E' 'D' 'U' 'O' 'S' 'E' 'S' '*' 'E' 'M' 'E' 'R' 'A' 'L' 'D' '*' '*' '*' 'S' 'A' 'L' 'L' 'Y' '*' '*'
+ATTEMPT 30
+Accuracy: 0.791666666667
+Accuracy so far: 0.745833333333
+Search time: 0:00:08.538973
+Average time: 0:00:06.263826
+'*' '*' 'T' 'H' 'E' 'I' 'R' '*' '*' '*' 'T' 'E' 'E' 'A' 'T' 'E' 'S' '*' 'M' 'O' 'L' 'R' 'U' 'E' 'S' 'I' 'V' 'E' 'R' 'E' 'E' '*' 'M' 'I' 'L' 'E' 'D' 'O' 'S' '*' '*' '*' 'D' 'E' 'N' 'I' 'N' 'C' 'H' '*' 'M' 'E' 'N' 'U' 'A' 'T' 'O' 'E' 'U' 'E' 'N' 'C' 'E' '*' 'O' 'P' 'E' 'R' 'A' 'T' 'E' '*' '*' '*' 'E' 'L' 'L' 'I' 'S' '*' '*'
+ATTEMPT 31
+Accuracy: 0.791666666667
+Accuracy so far: 0.747311827957
+Search time: 0:00:06.208220
+Average time: 0:00:06.262032
+'*' '*' 'P' 'E' 'I' 'O' 'S' '*' '*' '*' 'O' 'U' 'A' 'P' 'U' 'T' 'S' '*' 'C' 'L' 'A' 'S' 'S' 'R' 'O' 'O' 'M' 'E' 'Y' 'C' 'E' '*' 'S' 'E' 'M' 'I' 'D' 'M' 'T' '*' '*' '*' 'P' 'E' 'N' 'A' 'P' 'I' 'D' '*' 'T' 'H' 'O' 'U' 'D' 'E' 'C' 'I' 'S' 'I' 'O' 'N' 'S' '*' 'S' 'H' 'E' 'M' 'E' 'L' 'E' '*' '*' '*' 'S' 'T' 'S' 'D' 'Y' '*' '*'
+ATTEMPT 32
+Accuracy: 0.666666666667
+Accuracy so far: 0.744791666667
+Search time: 0:00:08.107089
+Average time: 0:00:06.319690
+'*' '*' 'S' 'L' 'E' 'E' 'G' '*' '*' '*' 'T' 'H' 'E' 'O' 'R' 'E' 'M' '*' 'S' 'U' 'O' 'T' 'R' 'A' 'N' 'I' 'A' 'O' 'N' 'E' 'S' '*' 'H' 'E' 'L' 'P' 'L' 'I' 'E' '*' '*' '*' 'R' 'E' 'P' 'A' 'S' 'U' 'S' '*' 'E' 'A' 'R' 'L' 'R' 'I' 'A' 'E' 'E' 'N' 'T' 'E' 'E' '*' 'A' 'M' 'E' 'N' 'D' 'E' 'D' '*' '*' '*' 'E' 'D' 'T' 'S' 'S' '*' '*'
+ATTEMPT 33
+Accuracy: 0.791666666667
+Accuracy so far: 0.746212121212
+Search time: 0:00:05.305637
+Average time: 0:00:06.288962
+'*' '*' 'M' 'S' 'G' 'I' 'D' '*' '*' '*' 'S' 'T' 'R' 'I' 'P' 'E' 'S' '*' 'P' 'O' 'R' 'T' 'F' 'O' 'L' 'I' 'O' 'O' 'O' 'P' 'S' '*' 'D' 'I' 'V' 'X' 'U' 'S' 'E' '*' '*' '*' 'V' 'I' 'I' 'N' 'R' 'E' 'A' '*' 'S' 'E' 'E' 'D' 'D' 'I' 'S' 'C' 'H' 'A' 'R' 'G' 'E' '*' 'S' 'P' 'E' 'A' 'K' 'E' 'R' '*' '*' '*' 'A' 'R' 'M' 'E' 'D' '*' '*'
+ATTEMPT 34
+Accuracy: 0.791666666667
+Accuracy so far: 0.747549019608
+Search time: 0:00:06.691966
+Average time: 0:00:06.300815
+'*' '*' 'A' 'D' 'A' 'S' 'R' '*' '*' '*' 'S' 'H' 'E' 'L' 'T' 'E' 'R' '*' 'G' 'E' 'A' 'N' 'A' 'U' 'S' 'E' 'E' 'O' 'R' 'G' 'Y' '*' 'D' 'I' 'V' 'X' 'I' 'I' 'I' '*' '*' '*' 'S' 'E' 'T' 'N' 'O' 'O' 'S' '*' 'S' 'T' 'A' 'R' 'G' 'U' 'A' 'T' 'E' 'M' 'A' 'L' 'A' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'S' 'M' 'A' 'R' 'T' '*' '*'
+ATTEMPT 35
+Accuracy: 0.666666666667
+Accuracy so far: 0.745238095238
+Search time: 0:00:04.410710
+Average time: 0:00:06.246812
+'*' '*' 'C' 'O' 'M' 'I' 'C' '*' '*' '*' 'A' 'A' 'O' 'A' 'E' 'I' 'S' '*' 'U' 'N' 'I' 'P' 'R' 'O' 'T' 'K' 'B' 'S' 'I' 'M' 'S' '*' 'P' 'A' 'I' 'R' 'I' 'O' 'N' '*' '*' '*' 'T' 'R' 'I' 'N' 'O' 'R' 'M' '*' 'E' 'I' 'O' 'C' 'G' 'U' 'E' 'S' 'T' 'B' 'O' 'O' 'K' '*' 'A' 'R' 'I' 'S' 'I' 'N' 'G' '*' '*' '*' 'S' 'E' 'E' 'D' 'S' '*' '*'
+ATTEMPT 36
+Accuracy: 0.75
+Accuracy so far: 0.74537037037
+Search time: 0:00:07.966959
+Average time: 0:00:06.294593
+'*' '*' 'O' 'S' 'C' 'A' 'R' '*' '*' '*' 'T' 'R' 'E' 'A' 'T' 'E' 'D' '*' 'S' 'O' 'E' 'E' 'S' 'O' 'S' 'E' 'J' 'E' 'R' 'I' 'K' '*' 'M' 'I' 'S' 'A' 'E' 'O' 'S' '*' '*' '*' 'D' 'E' 'M' 'K' 'N' 'E' 'W' '*' 'G' 'E' 'N' 'E' 'S' 'T' 'E' 'E' 'T' 'L' 'N' 'S' 'S' '*' 'O' 'P' 'E' 'R' 'A' 'T' 'E' '*' '*' '*' 'S' 'K' 'I' 'N' 'S' '*' '*'
+ATTEMPT 37
+Accuracy: 0.666666666667
+Accuracy so far: 0.743243243243
+Search time: 0:00:04.777585
+Average time: 0:00:06.253593
+'*' '*' 'O' 'P' 'E' 'R' 'A' '*' '*' '*' 'E' 'N' 'I' 'U' 'O' 'E' 'S' '*' 'U' 'N' 'I' 'P' 'R' 'O' 'T' 'K' 'B' 'S' 'A' 'M' 'E' '*' 'T' 'R' 'I' 'O' 'A' 'B' 'S' '*' '*' '*' 'A' 'L' 'A' 'L' 'L' 'O' 'E' '*' 'U' 'E' 'L' 'T' 'R' 'E' 'S' 'P' 'O' 'N' 'S' 'E' 'S' '*' 'S' 'A' 'I' 'E' 'T' 'E' 'D' '*' '*' '*' 'S' 'C' 'M' 'O' 'E' '*' '*'
+ATTEMPT 38
+Accuracy: 0.666666666667
+Accuracy so far: 0.741228070175
+Search time: 0:00:04.585735
+Average time: 0:00:06.209702
+'*' '*' 'C' 'L' 'I' 'P' 'S' '*' '*' '*' 'T' 'E' 'E' 'S' 'E' 'C' 'S' '*' 'P' 'H' 'O' 'T' 'O' 'S' 'H' 'O' 'P' 'A' 'O' 'E' 'S' '*' 'T' 'E' 'A' 'R' 'N' 'U' 'I' '*' '*' '*' 'D' 'P' 'I' 'I' 'G' 'U' 'E' '*' 'J' 'U' 'A' 'N' 'C' 'H' 'E' 'V' 'R' 'O' 'L' 'E' 'T' '*' 'T' 'R' 'A' 'C' 'K' 'E' 'R' '*' '*' '*' 'A' 'R' 'A' 'E' 'S' '*' '*'
+ATTEMPT 39
+Accuracy: 0.833333333333
+Accuracy so far: 0.74358974359
+Search time: 0:00:08.238618
+Average time: 0:00:06.261726
+'*' '*' 'C' 'R' 'A' 'I' 'G' '*' '*' '*' 'C' 'E' 'E' 'L' 'T' 'E' 'G' '*' 'S' 'O' 'A' 'E' 'T' 'E' 'N' 'E' 'S' 'I' 'N' 'T' 'L' '*' 'M' 'E' 'N' 'U' 'G' 'C' 'C' '*' '*' '*' 'R' 'E' 'C' 'M' 'O' 'S' 'T' '*' 'T' 'A' 'S' 'K' 'A' 'R' 'T' 'H' 'R' 'I' 'T' 'I' 'S' '*' 'D' 'R' 'E' 'S' 'S' 'E' 'S' '*' '*' '*' 'T' 'E' 'S' 'T' 'S' '*' '*'
+ATTEMPT 40
+Accuracy: 0.75
+Accuracy so far: 0.74375
+Search time: 0:00:04.547067
+Average time: 0:00:06.218859
+'*' '*' 'I' 'R' 'E' 'D' 'I' '*' '*' '*' 'I' 'N' 'I' 'U' 'R' 'E' 'S' '*' 'U' 'N' 'I' 'P' 'R' 'O' 'T' 'K' 'B' 'S' 'I' 'T' 'E' '*' 'P' 'E' 'E' 'R' 'I' 'T' 'I' '*' '*' '*' 'T' 'R' 'I' 'N' 'I' 'A' 'T' '*' 'T' 'I' 'O' 'N' 'G' 'A' 'T' 'H' 'E' 'R' 'I' 'N' 'G' '*' 'L' 'E' 'A' 'D' 'E' 'R' 'S' '*' '*' '*' 'D' 'I' 'S' 'K' 'S' '*' '*'
+ATTEMPT 41
+Accuracy: 0.875
+Accuracy so far: 0.746951219512
+Search time: 0:00:07.831011
+Average time: 0:00:06.258180
+'*' '*' 'S' 'A' 'U' 'D' 'I' '*' '*' '*' 'C' 'E' 'N' 'S' 'E' 'N' 'T' '*' 'T' 'A' 'N' 'A' 'E' 'E' 'T' 'E' 'R' 'H' 'R' 'T' 'L' '*' 'P' 'E' 'R' 'U' 'I' 'R' 'E' '*' '*' '*' 'G' 'I' 'G' 'R' 'I' 'N' 'H' '*' 'G' 'R' 'A' 'B' 'D' 'E' 'M' 'O' 'C' 'R' 'A' 'C' 'Y' '*' 'S' 'E' 'E' 'R' 'A' 'T' 'E' '*' '*' '*' 'S' 'L' 'Y' 'D' 'E' '*' '*'
+ATTEMPT 42
+Accuracy: 0.75
+Accuracy so far: 0.747023809524
+Search time: 0:00:09.026393
+Average time: 0:00:06.324090
+'*' '*' 'G' 'R' 'O' 'U' 'P' '*' '*' '*' 'W' 'I' 'E' 'W' 'E' 'R' 'S' '*' 'L' 'O' 'N' 'E' 'N' 'R' 'O' 'O' 'L' 'E' 'R' 'I' 'K' '*' 'I' 'S' 'M' 'E' 'A' 'K' 'H' '*' '*' '*' 'S' 'E' 'A' 'S' 'O' 'M' 'A' '*' 'B' 'I' 'O' 'S' 'T' 'U' 'A' 'R' 'S' 'L' 'A' 'N' 'E' '*' 'T' 'R' 'E' 'R' 'A' 'R' 'E' '*' '*' '*' 'K' 'A' 'I' 'T' 'E' '*' '*'
+ATTEMPT 43
+Accuracy: 0.708333333333
+Accuracy so far: 0.746124031008
+Search time: 0:00:03.720088
+Average time: 0:00:06.263532
+'*' '*' 'W' 'S' 'A' 'N' 'C' '*' '*' '*' 'R' 'E' 'A' 'D' 'E' 'R' 'S' '*' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' 'O' 'C' 'N' 'D' '*' 'S' 'T' 'A' 'R' 'D' 'O' 'E' '*' '*' '*' 'E' 'R' 'A' 'E' 'V' 'S' 'A' '*' 'I' 'R' 'A' 'Q' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' '*' 'R' 'A' 'I' 'N' 'B' 'O' 'W' '*' '*' '*' 'Y' 'E' 'M' 'E' 'N' '*' '*'
+ATTEMPT 44
+Accuracy: 0.75
+Accuracy so far: 0.746212121212
+Search time: 0:00:08.435010
+Average time: 0:00:06.312883
+'*' '*' 'G' 'R' 'O' 'U' 'P' '*' '*' '*' 'W' 'I' 'E' 'W' 'E' 'R' 'S' '*' 'L' 'O' 'N' 'E' 'N' 'R' 'O' 'O' 'L' 'E' 'R' 'I' 'K' '*' 'I' 'S' 'M' 'E' 'A' 'K' 'H' '*' '*' '*' 'S' 'E' 'A' 'S' 'O' 'M' 'A' '*' 'B' 'I' 'O' 'S' 'T' 'U' 'A' 'R' 'S' 'L' 'A' 'N' 'E' '*' 'T' 'R' 'E' 'R' 'A' 'R' 'E' '*' '*' '*' 'K' 'A' 'I' 'T' 'E' '*' '*'
+ATTEMPT 45
+Accuracy: 0.583333333333
+Accuracy so far: 0.742592592593
+Search time: 0:00:05.030825
+Average time: 0:00:06.284393
+'*' '*' 'C' 'R' 'E' 'A' 'M' '*' '*' '*' 'B' 'O' 'O' 'L' 'E' 'A' 'N' '*' 'P' 'A' 'N' 'A' 'S' 'O' 'N' 'I' 'C' 'R' 'R' 'D' 'D' '*' 'A' 'D' 'S' 'L' 'O' 'B' 'E' '*' '*' '*' 'A' 'T' 'E' 'O' 'A' 'R' 'O' '*' 'S' 'T' 'A' 'R' 'F' 'R' 'A' 'M' 'A' 'L' 'O' 'R' 'K' '*' 'A' 'I' 'A' 'R' 'A' 'R' 'A' '*' '*' '*' 'E' 'N' 'E' 'M' 'Y' '*' '*'
+ATTEMPT 46
+Accuracy: 0.75
+Accuracy so far: 0.742753623188
+Search time: 0:00:04.641980
+Average time: 0:00:06.248689
+'*' '*' 'G' 'R' 'I' 'R' 'I' '*' '*' '*' 'S' 'E' 'A' 'S' 'O' 'N' 'S' '*' 'P' 'H' 'O' 'T' 'O' 'S' 'H' 'O' 'P' 'A' 'O' 'G' 'E' '*' 'S' 'E' 'M' 'I' 'S' 'R' 'R' '*' '*' '*' 'R' 'A' 'P' 'U' 'T' 'A' 'H' '*' 'T' 'I' 'L' 'E' 'H' 'E' 'P' 'A' 'T' 'I' 'T' 'I' 'S' '*' 'R' 'H' 'A' 'E' 'L' 'E' 'A' '*' '*' '*' 'Y' 'I' 'E' 'L' 'D' '*' '*'
+ATTEMPT 47
+Accuracy: 0.75
+Accuracy so far: 0.742907801418
+Search time: 0:00:08.336018
+Average time: 0:00:06.293100
+'*' '*' 'L' 'S' 'E' 'D' 'D' '*' '*' '*' 'T' 'A' 'E' 'A' 'R' 'O' 'S' '*' 'C' 'O' 'N' 'T' 'R' 'A' 'C' 'T' 'S' 'E' 'R' 'D' 'S' '*' 'G' 'U' 'R' 'U' 'E' 'O' 'S' '*' '*' '*' 'M' 'A' 'I' 'I' 'N' 'C' 'H' '*' 'B' 'E' 'N' 'T' 'S' 'T' 'A' 'N' 'D' 'I' 'N' 'G' 'S' '*' 'O' 'P' 'E' 'R' 'A' 'T' 'E' '*' '*' '*' 'E' 'E' 'Y' 'S' 'S' '*' '*'
+ATTEMPT 48
+Accuracy: 0.75
+Accuracy so far: 0.743055555556
+Search time: 0:00:09.788499
+Average time: 0:00:06.365921
+'*' '*' 'T' 'W' 'I' 'K' 'I' '*' '*' '*' 'P' 'R' 'E' 'S' 'E' 'N' 'T' '*' 'S' 'A' 'A' 'L' 'A' 'E' 'V' 'H' 'Q' 'A' 'N' 'A' 'L' '*' 'P' 'E' 'R' 'U' 'S' 'T' 'E' '*' '*' '*' 'S' 'E' 'E' 'D' 'I' 'E' 'S' '*' 'C' 'T' 'A' 'R' 'C' 'E' 'L' 'E' 'B' 'R' 'I' 'T' 'Y' '*' 'S' 'I' 'E' 'M' 'E' 'N' 'S' '*' '*' '*' 'E' 'N' 'E' 'W' 'G' '*' '*'
+ATTEMPT 49
+Accuracy: 0.708333333333
+Accuracy so far: 0.742346938776
+Search time: 0:00:09.037711
+Average time: 0:00:06.420447
+'*' '*' 'T' 'R' 'E' 'F' 'R' '*' '*' '*' 'S' 'E' 'E' 'R' 'A' 'E' 'E' '*' 'C' 'A' 'M' 'P' 'A' 'I' 'G' 'N' 'S' 'U' 'S' 'P' 'S' '*' 'R' 'U' 'T' 'H' 'B' 'I' 'O' '*' '*' '*' 'L' 'E' 'E' 'I' 'A' 'R' 'A' '*' 'S' 'A' 'R' 'E' 'C' 'H' 'A' 'R' 'A' 'C' 'T' 'E' 'R' '*' 'D' 'R' 'E' 'S' 'S' 'E' 'D' '*' '*' '*' 'Y' 'A' 'N' 'I' 'D' '*' '*'
+ATTEMPT 50
+Accuracy: 0.75
+Accuracy so far: 0.7425
+Search time: 0:00:08.775690
+Average time: 0:00:06.467552
+'*' '*' 'A' 'S' 'A' 'I' 'I' '*' '*' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' 'R' 'E' 'R' 'T' 'E' 'N' 'V' 'O' 'D' 'E' 'A' 'R' 'S' '*' 'S' 'E' 'M' 'I' 'S' 'E' 'E' '*' '*' '*' 'S' 'E' 'A' 'E' 'A' 'C' 'H' '*' 'S' 'O' 'O' 'N' 'T' 'E' 'N' 'E' 'P' 'H' 'O' 'N' 'E' '*' 'P' 'R' 'E' 'P' 'A' 'R' 'E' '*' '*' '*' 'S' 'E' 'N' 'W' 'S' '*' '*'
+ATTEMPT 51
+Accuracy: 0.75
+Accuracy so far: 0.742647058824
+Search time: 0:00:05.395571
+Average time: 0:00:06.446533
+'*' '*' 'P' 'A' 'A' 'M' 'P' '*' '*' '*' 'P' 'O' 'R' 'T' 'A' 'R' 'E' '*' 'T' 'E' 'R' 'M' 'E' 'L' 'O' 'N' 'K' 'A' 'R' 'T' 'S' '*' 'I' 'S' 'L' 'E' 'S' 'I' 'R' '*' '*' '*' 'K' 'A' 'I' 'T' 'O' 'A' 'C' '*' 'S' 'O' 'R' 'T' 'E' 'D' 'I' 'N' 'B' 'U' 'R' 'G' 'H' '*' 'S' 'T' 'E' 'O' 'R' 'E' 'E' '*' '*' '*' 'S' 'T' 'N' 'E' 'S' '*' '*'
+ATTEMPT 52
+Accuracy: 0.708333333333
+Accuracy so far: 0.741987179487
+Search time: 0:00:04.144808
+Average time: 0:00:06.402269
+'*' '*' 'M' 'A' 'I' 'R' 'E' '*' '*' '*' 'L' 'E' 'S' 'S' 'O' 'N' 'S' '*' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' 'A' 'S' 'I' 'A' '*' 'S' 'T' 'A' 'N' 'D' 'E' 'C' '*' '*' '*' 'S' 'E' 'N' 'A' 'E' 'I' 'N' '*' 'M' 'A' 'T' 'E' 'L' 'A' 'N' 'C' 'A' 'S' 'T' 'E' 'R' '*' 'L' 'E' 'A' 'D' 'I' 'N' 'G' '*' '*' '*' 'S' 'A' 'D' 'E' 'S' '*' '*'
+ATTEMPT 53
+Accuracy: 0.791666666667
+Accuracy so far: 0.742924528302
+Search time: 0:00:06.296044
+Average time: 0:00:06.400264
+'*' '*' 'E' 'L' 'N' 'A' 'E' '*' '*' '*' 'C' 'L' 'A' 'S' 'S' 'E' 'S' '*' 'B' 'A' 'N' 'D' 'W' 'I' 'D' 'T' 'H' 'A' 'N' 'D' 'Y' '*' 'A' 'C' 'R' 'E' 'S' 'R' 'I' '*' '*' '*' 'T' 'E' 'N' 'I' 'S' 'S' 'N' '*' 'T' 'I' 'E' 'R' 'C' 'E' 'L' 'E' 'B' 'R' 'I' 'T' 'Y' '*' 'S' 'I' 'E' 'M' 'E' 'N' 'S' '*' '*' '*' 'E' 'D' 'G' 'E' 'S' '*' '*'
+ATTEMPT 54
+Accuracy: 0.791666666667
+Accuracy so far: 0.743827160494
+Search time: 0:00:09.359831
+Average time: 0:00:06.455071
+'*' '*' 'A' 'R' 'M' 'O' 'R' '*' '*' '*' 'C' 'L' 'E' 'A' 'R' 'E' 'D' '*' 'A' 'L' 'T' 'I' 'C' 'A' 'T' 'E' 'D' 'P' 'A' 'I' 'D' '*' 'L' 'O' 'V' 'E' 'R' 'S' 'S' '*' '*' '*' 'R' 'E' 'V' 'I' 'S' 'S' 'N' '*' 'S' 'O' 'L' 'E' 'L' 'I' 'V' 'E' 'R' 'P' 'O' 'O' 'L' '*' 'C' 'R' 'E' 'A' 'A' 'I' 'P' '*' '*' '*' 'E' 'D' 'N' 'N' 'A' '*' '*'
+ATTEMPT 55
+Accuracy: 0.75
+Accuracy so far: 0.743939393939
+Search time: 0:00:06.774045
+Average time: 0:00:06.460871
+'*' '*' 'C' 'T' 'A' 'T' 'E' '*' '*' '*' 'S' 'O' 'R' 'S' 'H' 'I' 'P' '*' 'P' 'T' 'N' 'A' 'S' 'E' 'T' 'I' 'C' 'L' 'U' 'C' 'Y' '*' 'E' 'U' 'R' 'O' 'A' 'D' 'E' '*' '*' '*' 'N' 'A' 'V' 'T' 'I' 'R' 'E' '*' 'D' 'A' 'T' 'E' 'E' 'O' 'N' 'V' 'A' 'R' 'T' 'E' 'R' '*' 'S' 'E' 'E' 'K' 'E' 'R' 'S' '*' '*' '*' 'D' 'R' 'A' 'W' 'S' '*' '*'
+ATTEMPT 56
+Accuracy: 0.666666666667
+Accuracy so far: 0.74255952381
+Search time: 0:00:07.154213
+Average time: 0:00:06.473252
+'*' '*' 'L' 'I' 'S' 'O' 'A' '*' '*' '*' 'T' 'O' 'S' 'H' 'I' 'B' 'A' '*' 'S' 'R' 'O' 'L' 'E' 'O' 'A' 'R' 'D' 'L' 'U' 'K' 'E' '*' 'A' 'N' 'T' 'I' 'A' 'S' 'S' '*' '*' '*' 'D' 'E' 'F' 'A' 'T' 'M' 'E' '*' 'C' 'O' 'N' 'F' 'H' 'E' 'A' 'D' 'L' 'I' 'N' 'E' 'S' '*' 'E' 'R' 'E' 'A' 'T' 'E' 'A' '*' '*' '*' 'T' 'N' 'T' 'E' 'D' '*' '*'
+ATTEMPT 57
+Accuracy: 0.708333333333
+Accuracy so far: 0.741959064327
+Search time: 0:00:08.743579
+Average time: 0:00:06.513082
+'*' '*' 'S' 'T' 'A' 'M' 'P' '*' '*' '*' 'E' 'N' 'E' 'C' 'I' 'E' 'S' '*' 'E' 'X' 'I' 'S' 'T' 'E' 'N' 'C' 'E' 'L' 'I' 'S' 'T' '*' 'E' 'A' 'R' 'N' 'S' 'S' 'L' '*' '*' '*' 'L' 'E' 'E' 'E' 'T' 'A' 'S' '*' 'I' 'T' 'E' 'M' 'N' 'E' 'C' 'E' 'S' 'S' 'I' 'T' 'Y' '*' 'D' 'R' 'E' 'S' 'S' 'E' 'S' '*' '*' '*' 'A' 'D' 'L' 'N' 'S' '*' '*'
+ATTEMPT 58
+Accuracy: 0.791666666667
+Accuracy so far: 0.742816091954
+Search time: 0:00:08.405101
+Average time: 0:00:06.545703
+'*' '*' 'C' 'L' 'U' 'B' 'S' '*' '*' '*' 'P' 'R' 'E' 'N' 'A' 'R' 'E' '*' 'C' 'L' 'E' 'V' 'E' 'L' 'A' 'N' 'D' 'E' 'A' 'S' 'Y' '*' 'I' 'N' 'T' 'O' 'D' 'N' 'A' '*' '*' '*' 'T' 'E' 'L' 'A' 'N' 'T' 'I' '*' 'C' 'A' 'R' 'L' 'R' 'E' 'S' 'T' 'U' 'R' 'C' 'E' 'S' '*' 'D' 'R' 'E' 'S' 'S' 'E' 'D' '*' '*' '*' 'S' 'M' 'E' 'L' 'L' '*' '*'
+ATTEMPT 59
+Accuracy: 0.708333333333
+Accuracy so far: 0.742231638418
+Search time: 0:00:07.473766
+Average time: 0:00:06.561433
+'*' '*' 'P' 'S' 'A' 'F' 'B' '*' '*' '*' 'P' 'R' 'E' 'P' 'A' 'R' 'E' '*' 'T' 'E' 'R' 'R' 'O' 'R' 'I' 'S' 'M' 'E' 'A' 'C' 'H' '*' 'M' 'L' 'S' 'O' 'A' 'N' 'T' '*' '*' '*' 'L' 'E' 'N' 'R' 'E' 'I' 'D' '*' 'H' 'I' 'N' 'T' 'S' 'U' 'E' 'I' 'U' 'E' 'A' 'C' 'E' '*' 'S' 'E' 'E' 'N' 'A' 'N' 'E' '*' '*' '*' 'S' 'T' 'A' 'R' 'T' '*' '*'
+ATTEMPT 60
+Accuracy: 0.791666666667
+Accuracy so far: 0.743055555556
+Search time: 0:00:07.953552
+Average time: 0:00:06.584635
+'*' '*' 'E' 'L' 'N' 'A' 'E' '*' '*' '*' 'C' 'L' 'A' 'S' 'S' 'E' 'S' '*' 'B' 'A' 'N' 'D' 'W' 'I' 'D' 'T' 'H' 'A' 'N' 'D' 'Y' '*' 'A' 'C' 'R' 'E' 'S' 'R' 'I' '*' '*' '*' 'T' 'E' 'N' 'I' 'S' 'S' 'N' '*' 'T' 'I' 'E' 'R' 'C' 'E' 'L' 'E' 'B' 'R' 'I' 'T' 'Y' '*' 'S' 'I' 'E' 'M' 'E' 'N' 'S' '*' '*' '*' 'E' 'D' 'G' 'E' 'S' '*' '*'
+ATTEMPT 61
+Accuracy: 0.708333333333
+Accuracy so far: 0.742486338798
+Search time: 0:00:07.693132
+Average time: 0:00:06.602807
+'*' '*' 'B' 'E' 'L' 'O' 'W' '*' '*' '*' 'P' 'O' 'P' 'U' 'L' 'A' 'R' '*' 'T' 'R' 'E' 'A' 'S' 'U' 'R' 'E' 'S' 'E' 'A' 'R' 'S' '*' 'D' 'E' 'S' 'K' 'A' 'Y' 'E' '*' '*' '*' 'H' 'E' 'Y' 'M' 'E' 'T' 'A' '*' 'V' 'O' 'I' 'P' 'S' 'R' 'O' 'R' 'E' 'O' 'U' 'S' 'E' '*' 'S' 'W' 'E' 'D' 'I' 'S' 'H' '*' '*' '*' 'E' 'A' 'S' 'D' 'E' '*' '*'
+ATTEMPT 62
+Accuracy: 0.833333333333
+Accuracy so far: 0.743951612903
+Search time: 0:00:04.890916
+Average time: 0:00:06.575196
+'*' '*' 'P' 'R' 'P' 'R' 'E' '*' '*' '*' 'T' 'R' 'A' 'V' 'E' 'L' 'S' '*' 'F' 'R' 'A' 'N' 'C' 'I' 'S' 'C' 'O' 'R' 'A' 'C' 'K' '*' 'D' 'E' 'A' 'R' 'O' 'C' 'T' '*' '*' '*' 'W' 'E' 'B' 'S' 'K' 'I' 'N' '*' 'T' 'H' 'N' 'I' 'T' 'E' 'C' 'E' 'P' 'O' 'E' 'E' 'T' '*' 'R' 'E' 'S' 'T' 'O' 'R' 'E' '*' '*' '*' 'S' 'T' 'Y' 'L' 'E' '*' '*'
+ATTEMPT 63
+Accuracy: 0.75
+Accuracy so far: 0.744047619048
+Search time: 0:00:05.429067
+Average time: 0:00:06.557003
+'*' '*' 'M' 'E' 'A' 'N' 'S' '*' '*' '*' 'S' 'O' 'R' 'T' 'E' 'U' 'S' '*' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' 'E' 'R' 'E' 'C' '*' 'S' 'P' 'A' 'S' 'D' 'I' 'R' '*' '*' '*' 'T' 'E' 'A' 'I' 'O' 'A' 'S' '*' 'S' 'E' 'G' 'A' 'A' 'U' 'T' 'O' 'M' 'A' 'T' 'I' 'C' '*' 'S' 'O' 'L' 'O' 'M' 'O' 'N' '*' '*' '*' 'R' 'O' 'S' 'E' 'S' '*' '*'
+ATTEMPT 64
+Accuracy: 0.875
+Accuracy so far: 0.74609375
+Search time: 0:00:05.225391
+Average time: 0:00:06.536197
+'*' '*' 'M' 'A' 'R' 'I' 'E' '*' '*' '*' 'R' 'E' 'S' 'N' 'O' 'M' 'S' '*' 'M' 'E' 'D' 'I' 'A' 'W' 'I' 'K' 'I' 'A' 'S' 'I' 'A' '*' 'A' 'S' 'I' 'N' 'L' 'O' 'C' '*' '*' '*' 'S' 'T' 'D' 'E' 'R' 'I' 'K' '*' 'M' 'I' 'L' 'E' 'S' 'T' 'N' 'E' 'S' 'S' 'O' 'E' 'X' '*' 'S' 'E' 'E' 'K' 'I' 'N' 'G' '*' '*' '*' 'S' 'P' 'I' 'E' 'S' '*' '*'
+ATTEMPT 65
+Accuracy: 0.708333333333
+Accuracy so far: 0.745512820513
+Search time: 0:00:05.468223
+Average time: 0:00:06.519766
+'*' '*' 'L' 'I' 'D' 'D' 'A' '*' '*' '*' 'P' 'R' 'E' 'D' 'I' 'C' 'T' '*' 'P' 'H' 'O' 'E' 'R' 'S' 'H' 'O' 'P' 'R' 'A' 'C' 'E' '*' 'T' 'I' 'R' 'E' 'E' 'N' 'E' '*' '*' '*' 'E' 'V' 'E' 'S' 'T' 'A' 'T' '*' 'S' 'V' 'E' 'R' 'S' 'O' 'C' 'I' 'E' 'T' 'I' 'E' 'S' '*' 'M' 'E' 'E' 'V' 'A' 'N' 'S' '*' '*' '*' 'E' 'R' 'E' 'R' 'G' '*' '*'
+ATTEMPT 66
+Accuracy: 0.833333333333
+Accuracy so far: 0.746843434343
+Search time: 0:00:09.020368
+Average time: 0:00:06.557654
+'*' '*' 'S' 'E' 'A' 'G' 'P' '*' '*' '*' 'L' 'E' 'C' 'T' 'U' 'R' 'E' '*' 'C' 'A' 'T' 'H' 'E' 'R' 'I' 'N' 'E' 'O' 'N' 'T' 'O' '*' 'U' 'N' 'T' 'V' 'U' 'S' 'E' '*' '*' '*' 'T' 'E' 'A' 'L' 'I' 'S' 'A' '*' 'B' 'A' 'R' 'N' 'D' 'E' 'S' 'C' 'R' 'I' 'B' 'E' 'S' '*' 'E' 'M' 'E' 'R' 'A' 'L' 'D' '*' '*' '*' 'A' 'R' 'P' 'S' 'E' '*' '*'
+ATTEMPT 67
+Accuracy: 0.666666666667
+Accuracy so far: 0.745646766169
+Search time: 0:00:06.584732
+Average time: 0:00:06.558058
+'*' '*' 'P' 'O' 'S' 'T' 'S' '*' '*' '*' 'R' 'O' 'U' 'A' 'L' 'E' 'A' '*' 'T' 'E' 'R' 'R' 'O' 'R' 'I' 'S' 'M' 'A' 'C' 'T' 'S' '*' 'N' 'A' 'S' 'A' 'S' 'O' 'R' '*' '*' '*' 'S' 'E' 'R' 'T' 'R' 'A' 'K' '*' 'S' 'E' 'A' 'S' 'E' 'D' 'I' 'N' 'B' 'U' 'R' 'G' 'H' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'S' 'W' 'I' 'S' 'S' '*' '*'
+ATTEMPT 68
+Accuracy: 0.791666666667
+Accuracy so far: 0.746323529412
+Search time: 0:00:07.603207
+Average time: 0:00:06.573428
+'*' '*' 'S' 'T' 'A' 'F' 'F' '*' '*' '*' 'A' 'E' 'R' 'I' 'E' 'R' 'A' '*' 'B' 'L' 'O' 'O' 'M' 'B' 'E' 'R' 'G' 'E' 'B' 'A' 'Y' '*' 'M' 'E' 'T' 'A' 'L' 'E' 'E' '*' '*' '*' 'L' 'E' 'U' 'T' 'R' 'E' 'O' '*' 'H' 'A' 'N' 'G' 'S' 'T' 'E' 'P' 'H' 'A' 'N' 'I' 'E' '*' 'A' 'M' 'E' 'R' 'I' 'C' 'A' '*' '*' '*' 'E' 'N' 'S' 'R' 'E' '*' '*'
+ATTEMPT 69
+Accuracy: 0.666666666667
+Accuracy so far: 0.745169082126
+Search time: 0:00:10.434034
+Average time: 0:00:06.629379
+'*' '*' 'C' 'R' 'E' 'S' 'T' '*' '*' '*' 'P' 'R' 'E' 'P' 'A' 'R' 'E' '*' 'M' 'E' 'A' 'S' 'U' 'R' 'I' 'N' 'G' 'E' 'A' 'S' 'T' '*' 'A' 'L' 'T' 'O' 'A' 'T' 'E' '*' '*' '*' 'S' 'E' 'O' 'T' 'E' 'N' 'D' '*' 'B' 'I' 'R' 'D' 'P' 'R' 'O' 'S' 'T' 'O' 'R' 'E' 'S' '*' 'E' 'L' 'E' 'C' 'T' 'E' 'D' '*' '*' '*' 'E' 'E' 'P' 'S' 'S' '*' '*'
+ATTEMPT 70
+Accuracy: 0.708333333333
+Accuracy so far: 0.744642857143
+Search time: 0:00:05.584148
+Average time: 0:00:06.614447
+'*' '*' 'N' 'D' 'A' 'R' 'E' '*' '*' '*' 'O' 'A' 'I' 'I' 'E' 'N' 'S' '*' 'I' 'N' 'T' 'E' 'R' 'V' 'I' 'E' 'W' 'S' 'T' 'U' 'D' '*' 'S' 'E' 'M' 'I' 'T' 'A' 'R' '*' '*' '*' 'R' 'I' 'D' 'A' 'R' 'A' 'B' '*' 'F' 'I' 'N' 'E' 'R' 'I' 'L' 'E' 'C' 'U' 'R' 'A' 'R' '*' 'O' 'L' 'T' 'A' 'N' 'E' 'R' '*' '*' '*' 'Y' 'A' 'R' 'D' 'S' '*' '*'
+ATTEMPT 71
+Accuracy: 0.833333333333
+Accuracy so far: 0.745892018779
+Search time: 0:00:06.866319
+Average time: 0:00:06.617995
+'*' '*' 'E' 'S' 'L' 'F' 'T' '*' '*' '*' 'T' 'H' 'E' 'O' 'R' 'E' 'M' '*' 'C' 'H' 'A' 'N' 'G' 'E' 'L' 'O' 'G' 'R' 'E' 'A' 'D' '*' 'D' 'E' 'M' 'O' 'E' 'A' 'U' '*' '*' '*' 'L' 'E' 'T' 'A' 'U' 'T' 'O' '*' 'M' 'I' 'N' 'T' 'M' 'I' 'N' 'N' 'E' 'S' 'O' 'T' 'A' '*' 'C' 'R' 'E' 'D' 'I' 'T' 'S' '*' '*' '*' 'A' 'S' 'S' 'E' 'T' '*' '*'
+ATTEMPT 72
+Accuracy: 0.833333333333
+Accuracy so far: 0.747106481481
+Search time: 0:00:06.843703
+Average time: 0:00:06.621130
+'*' '*' 'C' 'R' 'A' 'S' 'H' '*' '*' '*' 'P' 'E' 'A' 'T' 'T' 'L' 'E' '*' 'M' 'O' 'N' 'I' 'I' 'O' 'R' 'E' 'D' 'I' 'R' 'O' 'N' '*' 'P' 'E' 'T' 'E' 'A' 'S' 'I' '*' '*' '*' 'F' 'E' 'B' 'A' 'C' 'N' 'E' '*' 'G' 'U' 'R' 'U' 'C' 'H' 'E' 'V' 'R' 'O' 'L' 'E' 'T' '*' 'E' 'M' 'E' 'R' 'A' 'L' 'D' '*' '*' '*' 'E' 'M' 'P' 'T' 'Y' '*' '*'
+ATTEMPT 73
+Accuracy: 0.875
+Accuracy so far: 0.748858447489
+Search time: 0:00:06.094023
+Average time: 0:00:06.613909
+'*' '*' 'E' 'L' 'A' 'R' 'M' '*' '*' '*' 'F' 'N' 'U' 'R' 'E' 'A' 'O' '*' 'O' 'O' 'C' 'I' 'E' 'I' 'T' 'R' 'A' 'U' 'R' 'L' 'S' '*' 'D' 'E' 'L' 'L' 'C' 'W' 'O' '*' '*' '*' 'R' 'E' 'P' 'T' 'A' 'S' 'K' '*' 'I' 'N' 'C' 'H' 'A' 'R' 'G' 'E' 'N' 'T' 'I' 'N' 'A' '*' 'D' 'R' 'E' 'A' 'E' 'T' 'S' '*' '*' '*' 'E' 'N' 'T' 'M' 'Y' '*' '*'
+ATTEMPT 74
+Accuracy: 0.666666666667
+Accuracy so far: 0.747747747748
+Search time: 0:00:06.365989
+Average time: 0:00:06.610559
+'*' '*' 'C' 'L' 'I' 'M' 'B' '*' '*' '*' 'R' 'O' 'U' 'T' 'E' 'R' 'S' '*' 'B' 'A' 'N' 'D' 'W' 'I' 'D' 'T' 'H' 'A' 'R' 'T' 'S' '*' 'S' 'A' 'R' 'A' 'A' 'I' 'R' '*' '*' '*' 'T' 'E' 'N' 'L' 'E' 'A' 'F' '*' 'D' 'I' 'E' 'D' 'R' 'E' 'C' 'E' 'O' 'E' 'N' 'T' 'S' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'S' 'T' 'A' 'R' 'S' '*' '*'
+ATTEMPT 75
+Accuracy: 0.75
+Accuracy so far: 0.747777777778
+Search time: 0:00:07.541186
+Average time: 0:00:06.622967
+'*' '*' 'B' 'A' 'S' 'I' 'S' '*' '*' '*' 'W' 'A' 'B' 'I' 'O' 'A' 'T' '*' 'C' 'R' 'O' 'L' 'S' 'W' 'O' 'R' 'D' 'U' 'R' 'G' 'E' '*' 'A' 'C' 'E' 'R' 'A' 'T' 'M' '*' '*' '*' 'M' 'A' 'I' 'S' 'E' 'A' 'P' '*' 'P' 'E' 'T' 'E' 'P' 'R' 'E' 'D' 'I' 'C' 'T' 'E' 'D' '*' 'S' 'H' 'E' 'L' 'T' 'E' 'D' '*' '*' '*' 'S' 'T' 'L' 'T' 'S' '*' '*'
+ATTEMPT 76
+Accuracy: 0.708333333333
+Accuracy so far: 0.74725877193
+Search time: 0:00:06.791957
+Average time: 0:00:06.625191
+'*' '*' 'A' 'L' 'P' 'H' 'A' '*' '*' '*' 'S' 'E' 'E' 'R' 'T' 'U' 'T' '*' 'F' 'O' 'R' 'G' 'O' 'T' 'T' 'E' 'N' 'O' 'N' 'E' 'S' '*' 'P' 'O' 'L' 'Y' 'R' 'E' 'S' '*' '*' '*' 'M' 'E' 'L' 'U' 'S' 'D' 'A' '*' 'N' 'A' 'T' 'O' 'M' 'A' 'N' 'H' 'A' 'T' 'T' 'A' 'N' '*' 'P' 'L' 'E' 'A' 'S' 'E' 'D' '*' '*' '*' 'S' 'P' 'A' 'R' 'C' '*' '*'
+ATTEMPT 77
+Accuracy: 0.583333333333
+Accuracy so far: 0.74512987013
+Search time: 0:00:01.784482
+Average time: 0:00:06.562324
+'*' '*' 'A' 'R' 'D' 'I' 'A' '*' '*' '*' 'T' 'R' 'A' 'D' 'I' 'N' 'G' '*' 'U' 'O' 'I' 'E' 'R' 'O' 'T' 'E' 'B' 'O' 'W' 'N' 'S' '*' 'T' 'I' 'L' 'E' 'A' 'A' 'A' '*' '*' '*' 'V' 'I' 'A' 'G' 'R' 'A' 'S' '*' 'P' 'I' 'O' 'C' 'E' 'D' 'I' 'N' 'B' 'U' 'R' 'G' 'H' '*' 'S' 'E' 'R' 'E' 'N' 'U' 'A' '*' '*' '*' 'S' 'E' 'E' 'K' 'S' '*' '*'
+ATTEMPT 78
+Accuracy: 0.708333333333
+Accuracy so far: 0.744658119658
+Search time: 0:00:03.712834
+Average time: 0:00:06.525792
+'*' '*' 'M' 'A' 'K' 'E' 'R' '*' '*' '*' 'A' 'I' 'E' 'A' 'E' 'E' 'R' '*' 'C' 'O' 'N' 'V' 'I' 'N' 'C' 'E' 'D' 'L' 'I' 'N' 'E' '*' 'C' 'O' 'P' 'Y' 'I' 'T' 'E' '*' '*' '*' 'M' 'A' 'I' 'M' 'E' 'S' 'D' '*' 'T' 'H' 'I' 'N' 'B' 'L' 'O' 'O' 'M' 'B' 'E' 'R' 'G' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'A' 'S' 'K' 'E' 'D' '*' '*'
+ATTEMPT 79
+Accuracy: 0.75
+Accuracy so far: 0.744725738397
+Search time: 0:00:03.996032
+Average time: 0:00:06.493770
+'*' '*' 'B' 'O' 'N' 'U' 'S' '*' '*' '*' 'T' 'R' 'A' 'I' 'N' 'E' 'R' '*' 'P' 'R' 'A' 'C' 'T' 'I' 'C' 'E' 'S' 'O' 'E' 'C' 'D' '*' 'V' 'I' 'E' 'W' 'E' 'Y' 'E' '*' '*' '*' 'P' 'S' 'I' 'M' 'A' 'L' 'I' '*' 'T' 'I' 'O' 'N' 'S' 'E' 'E' 'D' 'A' 'H' 'I' 'N' 'G' '*' 'S' 'T' 'E' 'V' 'E' 'N' 'S' '*' '*' '*' 'S' 'A' 'I' 'N' 'T' '*' '*'
+ATTEMPT 80
+Accuracy: 0.791666666667
+Accuracy so far: 0.7453125
+Search time: 0:00:01.985635
+Average time: 0:00:06.437418
+'*' '*' 'M' 'O' 'U' 'S' 'E' '*' '*' '*' 'L' 'A' 'E' 'P' 'A' 'P' 'C' '*' 'S' 'E' 'T' 'C' 'S' 'R' 'E' 'O' 'M' 'T' 'I' 'E' 'D' '*' 'A' 'C' 'N' 'E' 'U' 'S' 'R' '*' '*' '*' 'I' 'N' 'T' 'F' 'U' 'I' 'O' '*' 'T' 'I' 'E' 'R' 'F' 'R' 'A' 'N' 'C' 'I' 'S' 'C' 'O' '*' 'E' 'L' 'L' 'I' 'O' 'T' 'T' '*' '*' '*' 'S' 'Y' 'A' 'N' 'S' '*' '*'
+ATTEMPT 81
+Accuracy: 0.75
+Accuracy so far: 0.74537037037
+Search time: 0:00:02.254179
+Average time: 0:00:06.385773
+'*' '*' 'P' 'U' 'I' 'T' 'F' '*' '*' '*' 'T' 'E' 'N' 'S' 'I' 'O' 'N' '*' 'P' 'E' 'D' 'I' 'A' 'T' 'R' 'I' 'C' 'E' 'X' 'I' 'T' '*' 'S' 'E' 'G' 'A' 'A' 'T' 'A' '*' '*' '*' 'C' 'E' 'R' 'L' 'O' 'T' 'S' '*' 'C' 'A' 'R' 'L' 'P' 'O' 'R' 'T' 'C' 'O' 'S' 'I' 'O' '*' 'M' 'I' 'N' 'O' 'L' 'T' 'A' '*' '*' '*' 'C' 'A' 'S' 'E' 'S' '*' '*'
+ATTEMPT 82
+Accuracy: 0.875
+Accuracy so far: 0.746951219512
+Search time: 0:00:04.450942
+Average time: 0:00:06.362178
+'*' '*' 'I' 'N' 'P' 'U' 'T' '*' '*' '*' 'H' 'I' 'T' 'A' 'C' 'H' 'I' '*' 'A' 'R' 'M' 'S' 'T' 'R' 'O' 'N' 'G' 'P' 'R' 'O' 'C' '*' 'R' 'U' 'T' 'H' 'A' 'A' 'A' '*' '*' '*' 'S' 'E' 'A' 'R' 'E' 'E' 'F' '*' 'B' 'A' 'R' 'N' 'M' 'A' 'C' 'E' 'D' 'O' 'N' 'I' 'A' '*' 'G' 'R' 'E' 'N' 'A' 'D' 'M' '*' '*' '*' 'S' 'T' 'A' 'T' 'S' '*' '*'
+ATTEMPT 83
+Accuracy: 0.708333333333
+Accuracy so far: 0.746485943775
+Search time: 0:00:05.564956
+Average time: 0:00:06.352573
+'*' '*' 'B' 'L' 'U' 'E' 'S' '*' '*' '*' 'P' 'R' 'E' 'S' 'N' 'E' 'R' '*' 'M' 'E' 'S' 'S' 'E' 'N' 'G' 'E' 'R' 'E' 'N' 'D' 'S' '*' 'S' 'O' 'F' 'A' 'D' 'D' 'R' '*' '*' '*' 'L' 'E' 'T' 'T' 'A' 'N' 'D' '*' 'C' 'A' 'R' 'E' 'A' 'N' 'T' 'I' 'V' 'I' 'R' 'U' 'S' '*' 'T' 'H' 'E' 'A' 'T' 'R' 'E' '*' '*' '*' 'E' 'D' 'G' 'E' 'S' '*' '*'
+ATTEMPT 84
+Accuracy: 0.666666666667
+Accuracy so far: 0.745535714286
+Search time: 0:00:03.183015
+Average time: 0:00:06.314840
+'*' '*' 'S' 'H' 'A' 'R' 'P' '*' '*' '*' 'C' 'O' 'N' 'C' 'E' 'R' 'T' '*' 'B' 'L' 'O' 'O' 'M' 'B' 'E' 'R' 'G' 'A' 'A' 'A' 'E' '*' 'S' 'S' 'A' 'R' 'S' 'S' 'L' '*' '*' '*' 'E' 'V' 'A' 'I' 'S' 'L' 'E' '*' 'U' 'N' 'I' 'V' 'C' 'I' 'G' 'A' 'R' 'E' 'T' 'T' 'E' '*' 'C' 'A' 'R' 'R' 'I' 'E' 'S' '*' '*' '*' 'E' 'N' 'D' 'E' 'D' '*' '*'
+ATTEMPT 85
+Accuracy: 0.75
+Accuracy so far: 0.745588235294
+Search time: 0:00:05.845464
+Average time: 0:00:06.309318
+'*' '*' 'A' 'L' 'E' 'R' 'T' '*' '*' '*' 'T' 'R' 'E' 'A' 'A' 'R' 'E' '*' 'C' 'O' 'A' 'V' 'U' 'T' 'E' 'R' 'S' 'L' 'E' 'V' 'Y' '*' 'S' 'A' 'L' 'T' 'O' 'N' 'E' '*' '*' '*' 'S' 'E' 'A' 'U' 'N' 'I' 'T' '*' 'J' 'U' 'A' 'N' 'D' 'E' 'L' 'I' 'V' 'E' 'R' 'E' 'D' '*' 'T' 'R' 'E' 'A' 'T' 'E' 'D' '*' '*' '*' 'S' 'R' 'T' 'S' 'S' '*' '*'
+ATTEMPT 86
+Accuracy: 0.75
+Accuracy so far: 0.745639534884
+Search time: 0:00:05.092120
+Average time: 0:00:06.295164
+'*' '*' 'E' 'T' 'E' 'N' 'P' '*' '*' '*' 'P' 'R' 'E' 'P' 'A' 'R' 'E' '*' 'P' 'R' 'E' 'C' 'A' 'S' 'I' 'L' 'Y' 'E' 'A' 'C' 'H' '*' 'A' 'N' 'D' 'I' 'E' 'A' 'T' '*' '*' '*' 'T' 'E' 'E' 'R' 'E' 'A' 'D' '*' 'C' 'A' 'R' 'L' 'S' 'E' 'O' 'I' 'S' 'O' 'B' 'L' 'D' '*' 'C' 'L' 'E' 'A' 'R' 'L' 'Y' '*' '*' '*' 'S' 'T' 'O' 'N' 'E' '*' '*'
+ATTEMPT 87
+Accuracy: 0.625
+Accuracy so far: 0.744252873563
+Search time: 0:00:02.802916
+Average time: 0:00:06.255024
+'*' '*' 'P' 'A' 'S' 'T' 'A' '*' '*' '*' 'S' 'R' 'G' 'T' 'E' 'A' 'D' '*' 'U' 'O' 'I' 'E' 'R' 'O' 'T' 'E' 'B' 'S' 'O' 'N' 'S' '*' 'W' 'I' 'F' 'I' 'A' 'N' 'C' '*' '*' '*' 'E' 'E' 'T' 'G' 'E' 'E' 'K' '*' 'D' 'I' 'S' 'C' 'E' 'S' 'T' 'A' 'B' 'L' 'I' 'S' 'H' '*' 'T' 'O' 'T' 'O' 'A' 'U' 'E' '*' '*' '*' 'N' 'E' 'W' 'L' 'Y' '*' '*'
+ATTEMPT 88
+Accuracy: 0.708333333333
+Accuracy so far: 0.74384469697
+Search time: 0:00:04.440260
+Average time: 0:00:06.234401
+'*' '*' 'M' 'P' 'A' 'I' 'C' '*' '*' '*' 'V' 'I' 'A' 'T' 'R' 'A' 'M' '*' 'P' 'E' 'D' 'I' 'A' 'T' 'R' 'I' 'C' 'E' 'H' 'I' 'D' '*' 'H' 'E' 'R' 'O' 'T' 'I' 'E' '*' '*' '*' 'F' 'L' 'U' 'I' 'C' 'T' 'E' '*' 'D' 'U' 'A' 'L' 'C' 'L' 'E' 'V' 'E' 'L' 'A' 'N' 'D' '*' 'E' 'M' 'E' 'R' 'A' 'L' 'D' '*' '*' '*' 'A' 'N' 'P' 'R' 'Y' '*' '*'
+ATTEMPT 89
+Accuracy: 0.708333333333
+Accuracy so far: 0.743445692884
+Search time: 0:00:06.008021
+Average time: 0:00:06.231858
+'*' '*' 'D' 'R' 'I' 'L' 'L' '*' '*' '*' 'T' 'H' 'E' 'R' 'E' 'O' 'F' '*' 'A' 'E' 'I' 'N' 'C' 'T' 'S' 'O' 'N' 'E' 'A' 'S' 'T' '*' 'S' 'A' 'R' 'A' 'E' 'C' 'O' '*' '*' '*' 'S' 'E' 'N' 'T' 'H' 'I' 'S' '*' 'D' 'I' 'S' 'C' 'A' 'E' 'T' 'E' 'S' 'R' 'I' 'T' 'Y' '*' 'S' 'I' 'E' 'M' 'E' 'N' 'S' '*' '*' '*' 'D' 'R' 'A' 'W' 'S' '*' '*'
+ATTEMPT 90
+Accuracy: 0.75
+Accuracy so far: 0.743518518519
+Search time: 0:00:03.040116
+Average time: 0:00:06.196394
+'*' '*' 'R' 'E' 'A' 'L' 'M' '*' '*' '*' 'A' 'E' 'R' 'S' 'E' 'A' 'A' '*' 'P' 'L' 'A' 'I' 'N' 'T' 'I' 'F' 'F' 'O' 'C' 'L' 'C' '*' 'S' 'N' 'F' 'I' 'U' 'N' 'I' '*' '*' '*' 'T' 'A' 'B' 'N' 'T' 'S' 'C' '*' 'P' 'A' 'I' 'R' 'D' 'E' 'T' 'H' 'E' 'R' 'I' 'R' 'E' '*' 'S' 'I' 'E' 'M' 'E' 'N' 'S' '*' '*' '*' 'C' 'R' 'A' 'P' 'S' '*' '*'
+ATTEMPT 91
+Accuracy: 0.833333333333
+Accuracy so far: 0.744505494505
+Search time: 0:00:05.650091
+Average time: 0:00:06.190391
+'*' '*' 'P' 'L' 'A' 'C' 'E' '*' '*' '*' 'C' 'E' 'E' 'R' 'O' 'E' 'S' '*' 'C' 'O' 'N' 'S' 'T' 'R' 'U' 'C' 'T' 'O' 'N' 'E' 'S' '*' 'P' 'A' 'I' 'R' 'E' 'S' 'T' '*' '*' '*' 'S' 'E' 'E' 'T' 'E' 'M' 'P' '*' 'A' 'N' 'N' 'A' 'I' 'N' 'C' 'O' 'R' 'R' 'E' 'C' 'T' '*' 'T' 'H' 'E' 'A' 'T' 'R' 'E' '*' '*' '*' 'S' 'E' 'N' 'S' 'E' '*' '*'
+ATTEMPT 92
+Accuracy: 0.708333333333
+Accuracy so far: 0.744112318841
+Search time: 0:00:05.382583
+Average time: 0:00:06.181610
+'*' '*' 'B' 'E' 'L' 'O' 'W' '*' '*' '*' 'P' 'O' 'P' 'U' 'L' 'A' 'R' '*' 'T' 'R' 'E' 'A' 'S' 'U' 'R' 'E' 'S' 'E' 'A' 'R' 'S' '*' 'D' 'E' 'S' 'K' 'A' 'Y' 'E' '*' '*' '*' 'H' 'E' 'Y' 'M' 'E' 'T' 'A' '*' 'V' 'O' 'I' 'P' 'S' 'R' 'O' 'R' 'E' 'O' 'U' 'S' 'E' '*' 'S' 'W' 'E' 'D' 'I' 'S' 'H' '*' '*' '*' 'E' 'A' 'S' 'D' 'E' '*' '*'
+ATTEMPT 93
+Accuracy: 0.75
+Accuracy so far: 0.74417562724
+Search time: 0:00:06.795727
+Average time: 0:00:06.188213
+'*' '*' 'I' 'S' 'S' 'U' 'E' '*' '*' '*' 'V' 'I' 'E' 'T' 'S' 'R' 'S' '*' 'L' 'I' 'V' 'E' 'R' 'P' 'O' 'O' 'L' 'E' 'L' 'E' 'S' '*' 'S' 'O' 'M' 'A' 'E' 'A' 'R' '*' '*' '*' 'S' 'E' 'N' 'D' 'A' 'T' 'A' '*' 'B' 'A' 'R' 'E' 'S' 'T' 'O' 'C' 'K' 'I' 'N' 'G' 'S' '*' 'T' 'E' 'E' 'N' 'A' 'G' 'E' '*' '*' '*' 'S' 'E' 'N' 'S' 'E' '*' '*'
+ATTEMPT 94
+Accuracy: 0.666666666667
+Accuracy so far: 0.74335106383
+Search time: 0:00:03.922489
+Average time: 0:00:06.164110
+'*' '*' 'R' 'D' 'A' 'A' 'N' '*' '*' '*' 'C' 'E' 'O' 'I' 'T' 'E' 'T' '*' 'M' 'A' 'C' 'E' 'D' 'O' 'N' 'I' 'A' 'O' 'S' 'E' 'S' '*' 'M' 'E' 'N' 'U' 'V' 'I' 'I' '*' '*' '*' 'R' 'I' 'D' 'E' 'N' 'D' 'S' '*' 'M' 'A' 'U' 'I' 'D' 'O' 'E' 'E' 'S' 'A' 'L' 'E' 'T' '*' 'S' 'R' 'A' 'E' 'T' 'L' 'E' '*' '*' '*' 'S' 'T' 'A' 'T' 'E' '*' '*'
+ATTEMPT 95
+Accuracy: 0.875
+Accuracy so far: 0.744736842105
+Search time: 0:00:05.141536
+Average time: 0:00:06.153346
+'*' '*' 'C' 'A' 'C' 'L' 'E' '*' '*' '*' 'R' 'E' 'L' 'H' 'E' 'A' 'D' '*' 'P' 'E' 'R' 'S' 'O' 'N' 'N' 'E' 'L' 'A' 'V' 'T' 'O' '*' 'S' 'O' 'L' 'O' 'T' 'E' 'A' '*' '*' '*' 'R' 'E' 'G' 'U' 'N' 'I' 'V' '*' 'A' 'N' 'T' 'I' 'H' 'U' 'N' 'I' 'S' 'R' 'I' 'E' 'N' '*' 'E' 'L' 'E' 'C' 'T' 'E' 'D' '*' '*' '*' 'Y' 'W' 'I' 'S' 'S' '*' '*'
+ATTEMPT 96
+Accuracy: 0.666666666667
+Accuracy so far: 0.743923611111
+Search time: 0:00:07.092901
+Average time: 0:00:06.163133
+'*' '*' 'S' 'W' 'I' 'N' 'G' '*' '*' '*' 'D' 'I' 'E' 'S' 'I' 'E' 'D' '*' 'C' 'E' 'M' 'A' 'A' 'N' 'N' 'E' 'R' 'E' 'V' 'I' 'L' '*' 'E' 'E' 'L' 'O' 'D' 'E' 'L' '*' '*' '*' 'R' 'E' 'G' 'A' 'L' 'A' 'N' '*' 'R' 'A' 'T' 'E' 'R' 'O' 'R' 'E' 'R' 'S' 'T' 'E' 'R' '*' 'P' 'L' 'E' 'A' 'S' 'E' 'D' '*' '*' '*' 'Y' 'E' 'A' 'R' 'S' '*' '*'
+ATTEMPT 97
+Accuracy: 0.791666666667
+Accuracy so far: 0.74441580756
+Search time: 0:00:03.999009
+Average time: 0:00:06.140822
+'*' '*' 'R' 'A' 'A' 'S' 'S' '*' '*' '*' 'W' 'E' 'S' 'S' 'E' 'T' 'E' '*' 'M' 'A' 'C' 'I' 'N' 'T' 'O' 'S' 'H' 'I' 'R' 'O' 'N' '*' 'S' 'C' 'S' 'I' 'A' 'R' 'V' '*' '*' '*' 'K' 'E' 'N' 'M' 'A' 'E' 'D' '*' 'B' 'I' 'N' 'D' 'I' 'N' 'R' 'E' 'O' 'I' 'N' 'C' 'U' '*' 'T' 'E' 'E' 'N' 'A' 'G' 'E' '*' '*' '*' 'D' 'R' 'E' 'S' 'S' '*' '*'
+ATTEMPT 98
+Accuracy: 0.75
+Accuracy so far: 0.744472789116
+Search time: 0:00:03.088180
+Average time: 0:00:06.109673
+'*' '*' 'R' 'E' 'H' 'A' 'B' '*' '*' '*' 'C' 'E' 'R' 'O' 'N' 'A' 'O' '*' 'P' 'L' 'A' 'I' 'N' 'T' 'I' 'F' 'F' 'R' 'O' 'C' 'K' '*' 'I' 'N' 'F' 'O' 'I' 'S' 'T' '*' '*' '*' 'F' 'L' 'U' 'S' 'U' 'I' 'T' '*' 'E' 'A' 'I' 'N' 'B' 'R' 'O' 'A' 'D' 'B' 'A' 'N' 'D' '*' 'E' 'N' 'L' 'A' 'A' 'N' 'E' '*' '*' '*' 'S' 'E' 'T' 'Y' 'E' '*' '*'
+ATTEMPT 99
+Accuracy: 0.708333333333
+Accuracy so far: 0.744107744108
+Search time: 0:00:05.349887
+Average time: 0:00:06.101998
+'*' '*' 'F' 'R' 'A' 'M' 'E' '*' '*' '*' 'P' 'R' 'E' 'S' 'A' 'R' 'O' '*' 'P' 'L' 'A' 'I' 'N' 'T' 'I' 'F' 'F' 'L' 'A' 'N' 'D' '*' 'E' 'S' 'F' 'A' 'A' 'Y' 'C' '*' '*' '*' 'S' 'I' 'R' 'N' 'E' 'I' 'S' '*' 'R' 'A' 'C' 'E' 'T' 'R' 'S' 'A' 'R' 'I' 'R' 'E' 'S' '*' 'S' 'C' 'R' 'E' 'E' 'N' 'S' '*' '*' '*' 'O' 'A' 'S' 'I' 'S' '*' '*'
+ATTEMPT 100
+Accuracy: 0.625
+Accuracy so far: 0.742916666667
+Search time: 0:00:06.787379
+Average time: 0:00:06.108852
+'*' '*' 'S' 'L' 'A' 'M' 'B' '*' '*' '*' 'P' 'I' 'E' 'R' 'E' 'R' 'S' '*' 'M' 'I' 'A' 'T' 'E' 'M' 'O' 'T' 'A' 'A' 'R' 'M' 'S' '*' 'O' 'C' 'L' 'C' 'A' 'S' 'S' '*' '*' '*' 'H' 'E' 'R' 'R' 'E' 'I' 'D' '*' 'S' 'U' 'R' 'E' 'P' 'R' 'O' 'S' 'T' 'O' 'R' 'E' 'S' '*' 'E' 'N' 'E' 'M' 'I' 'E' 'S' '*' '*' '*' 'T' 'A' 'P' 'E' 'S' '*' '*'Solved 0 out of 100 puzzles 
