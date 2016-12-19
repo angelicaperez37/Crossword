@@ -14,23 +14,25 @@ from ast import literal_eval as make_tuple
 start = timeit.default_timer()
 
 #Globals
-cwSize = 9
-numFeatures = 6
-dataFileName = 'trainingMidiResults_trial6_delta_weight_scores_500iter_wbw.txt'
-weightFileName = 'weights_midi_trial6_delta_weight_scores_500iter_wbw.txt'
+cwSize = 5
+numWordFeatures = 0
+numLetterFeatures = 16
+dataFileName = 'trainingMiniResults_trial10_delta_weight_scores_5000iter_wbw.txt'
+#weightFileName_Word = 'weights_midi_trial10_delta_weight_scores_500iter_word.txt'
+weightFileName_Letter = 'weights_mini_trial10_delta_weight_scores_5000iter_letter.txt'
 
 # Process Database
 d = createGoogleDatabase()   #createNYTDatabase
 sortedData = sortDatabase(d, cwSize) #dict where keys are the lengths of the words co								ntained in corresponding list
 
 # Choose crossword grid pattern
-grid = getMidiGrid()
+grid = getMiniGrid()
 
 # Create Crossword Object
 #cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
-QLA = QLearningAlgorithm(numFeatures)
-iters = 500
+QLA = QLearningAlgorithm(numWordFeatures, numLetterFeatures)
+iters = 1
 numSolved = 0
 temp = datetime.now()
 totalTime = temp-temp
@@ -49,30 +51,29 @@ for i in range(iters):
 
 	print 'In Backtrack Search'
 	search = BacktrackingSearch()
-	solution, fvs, domainPercentages, assignments, reason = search.solve(cw, csp, mcv=False, ac3=True)
-	print 'Terminated because : ' + reason
+	fvs, actions, maxAdditionalAssignments = search.solve_backtrack_learning(csp, cw, mcv=True, mac=True)
 	end = datetime.now()
-	addAssignmentsToGrid(cw, solution)
+	#addAssignmentsToGrid(cw, solution)
+
+	#print solution
+	#print cw.grid
 
 	print 'Incorporating feedback.'
 	# Compute Puzzle correctness
-	numWordsAssigned = 0
-	for var in solution.keys():
-		if len(make_tuple(var)) > 2:
-			numWordsAssigned += 1
-	solvedPerc = numWordsAssigned*1.0/len(cw.words.keys())
-	QLA.incorporateFeedback(fvs, assignments, domainPercentages, solvedPerc)
-	wf = open(weightFileName, 'wb')
+
+
+	QLA.incorporateFeedback_backtrack(fvs, actions,maxAdditionalAssignments)
+	'''wf = open(weightFileName_Word, 'wb')
+	QLA.word_weights[0].tofile(wf, "\n")
+	wf.close()
+	'''
+	wf = open(weightFileName_Letter, 'wb')
 	for j in range(26):
 		QLA.weights[j].tofile(wf, "\n")
 	wf.close()
 
-	print solution
-	print domainPercentages
-	print solvedPerc
-
-	print cw.grid
-
+	# Print results to file
+	'''
 	totalTime += (end-start)
 	totalAccuracy += solvedPerc
 
@@ -89,12 +90,14 @@ for i in range(iters):
 	cw.grid.tofile(df, " ")
 	df.close()
 	print toWrite
+	'''
 
-print QLA.weights
+# Print results to flle
+'''
 df = open(dataFileName, 'a')
 df.write("Solved "+str(numSolved)+" out of "+str(i+1)+" puzzles \n")
 df.close()
-
+'''
 ###
 #features = CWFeatureExtractor(cw, cw.letters[(0,2)], 'A')
 #print features

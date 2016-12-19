@@ -25,7 +25,7 @@ class LetterType(Enum):
 	third_most_common_singles = 16
 
 # to indicate which letter type features we want to use
-activeLetterTypeFeatures = range(1,3) +[12,13]
+activeLetterTypeFeatures = range(1,3) +range(12,14) #+range(14,17)
 activeDiagonalLetterTypeFeatures = range(1,4) + [12,13]
 activeAdjacentLetterTypeFeatures = range(1,5)+[12,13]
 
@@ -71,33 +71,85 @@ VOWEL = set(['A','E','I','O','U'])
 MOST_COMMON_SINGLES = set(['E','T','A','O'])
 SECOND_MOST_COMMON_SINGLES = set(['I','N','S','H'])
 THIRD_MOST_COMMON_SINGLES = set(['D','L','U'])
+# Common 2-consonant clusters
+CONSONANT_CLUSTERS = set(['PL', 'PR', 'BL', 'BR', 'TR', 'DR', 'KL', 'KR', 'GL', 'GR', 'FL', 'SH', 'SL', 'SM', 'SN', 'SP', 'ST', 'SW', 'TW', 'DW', 'FT','LD','LK', 'LP','LB', 'LF','LV','MP', 'ND', 'SP','SK','ST'])
 
 class CSPFeatureExtractor():
 
 	def extract(self, csp, cw, action, assignment):
 		# feature: (name, value(normTotal/bool))
 		features = []
+		if len(assignment) > 1:
+			# Possible Word Features
+			features += self.wordFeatures(csp, cw, action, assignment)
+		else:
+			# Possible Letter Features
+			features += self.letterFeatures(csp, cw, action, assignment)
+		return features
 
-		# Possible Word Features
-		features += self.wordByWordFeatures(csp, cw, action, assignment)
+	def letterFeatures(self, csp, cw, action, assignment):
+		features = []
 
-		''' # Possible Letter Features
 		features += self.letterTypeFeatures(assignment, '', activeLetterTypeFeatures)
 		features += self.diagonalLetterFeatures(cw.blanks, csp, action)
 		features += self.adjacentLetterFeatures(cw.blanks, csp, action)
 		features += self.wordAttributeFeatures(cw, csp, action)
-		#features += self.gridLocationAttributeFeatures(cw, csp, action)
-		'''
+		#features += self.letterContextFeatures(csp, action, assignment)
+
 		return features
 
 	### Word by word Approach features
-	def wordByWordFeatures(self, csp, cw, action, assignment):
+	def wordFeatures(self, csp, cw, action, assignment):
 
 		features = []
-		wordLength = action.length
-		# word length
-		features.append(('word_length', wordLength*1.0/cw.size))
+		features += self.wordRatioFeatures(action, assignment)
+		features += self.wordAssignedRatio(csp, action, assignment)
+		features += self.wordEndsInS(assignment)
+		features += self.wordVowelConsonantClusters(action, assignment)
+		features += self.wordContextFeatures(csp, action, assignment)
+		return features
 
+	def letterContextFeatures(self, csp, action, assignment):
+		###--- Sequence ratios w/ context ---#
+		# Vowel-Consonant ratio
+		features = []
+		numVowelConsSeqs = 0
+		numCommonConsSeqs = 0
+		totalSeqs = 0
+		row = action.loc[0]
+		col = action.loc[1]
+
+		nbrs = [(row+1,col), (row-1,col), (row,col+1), (row,col-1)]
+		# for each of the letter's neighbors
+		for idx,nbr in enumerate(nbrs):
+			nbrKey = str(nbr)
+			# if the neighbor is a valid, assigned Letter variable, check for feature
+			if nbrKey in csp.variables:
+				if len(csp.values[nbrKey]) == 1:
+					totalSeqs += 1
+					nbrVal = csp.values[nbrKey][0]
+					bool1 = assignment in VOWEL and nbrVal not in VOWEL
+					bool2 = assignment not in VOWEL and nbrVal in VOWEL
+					if bool1 or bool2:
+						numVowelConsSeqs += 1
+					if nbrVal not in VOWEL and assignment not in VOWEL:
+						if idx in [0,2] and assignment + nbrVal in CONSONANT_CLUSTERS:
+							numCommonConsSeqs += 1
+						elif nbrVal + assignment in CONSONANT_CLUSTERS:
+							numCommonConsSeqs += 1
+		vowelConsSeqRatio = 0
+		commonConsSeqRatio = 0
+		if totalSeqs > 0:
+			vowelConsSeqRatio = numVowelConsSeqs*1.0/totalSeqs
+			commonConsSeqRatio = numCommonConsSeqs*1.0/totalSeqs
+		features.append(('vowelConsSeqRatio_inContext_forLetter', vowelConsSeqRatio))
+		features.append(('commonConsSeqRatio_inContext_forLetter', commonConsSeqRatio))
+		return features
+
+	def wordRatioFeatures(self, action, assignment):
+		features = []
+		wordLength = action.length
+		features.append(('length', wordLength*1.0/9))
 		# vowel ratio, and 3 most comman single (mcs) categories
 		numVowels = 0
 		numMCS = 0
@@ -120,7 +172,11 @@ class CSPFeatureExtractor():
 		features.append(('mcs1', mcsRatio1))
 		features.append(('mcs2', mcsRatio2))
 		features.append(('mcs3', mcsRatio3))
+		return features
 
+	def wordAssignedRatio(self, csp, action, assignment):
+		features = []
+		wordLength = action.length
 		# ratio of contained Letter variables assigned
 		startRow = action.startLoc[0]
 		startCol = action.startLoc[1]
@@ -135,6 +191,115 @@ class CSPFeatureExtractor():
 				numAssigned += 1
 		assignedRatio = numAssigned*1.0/wordLength
 		features.append(('assigned_ratio', assignedRatio))
+		return features
+
+	def wordEndsInS(self, assignment):
+		features = []
+		###--- Ends in S ---###
+		if assignment[-1] == 'S':
+			features.append(('ends_in_S', 1))
+		else:
+			features.append(('ends_in_S', 0))
+		return features
+
+
+	def wordVowelConsonantClusters(self, action, assignment):
+		###--- sequence ratios w/in words ---###
+		# Vowel-Consonant ratio
+		features = []
+		wordLength = action.length
+		numVowelConsSeqs = 0
+		for i in range(wordLength-1):
+			bool1 = assignment[i] in VOWEL and assignment[i-1] not in VOWEL
+			bool2 = assignment[i] not in VOWEL and assignment[i-1] in VOWEL
+			if bool1 or bool2:
+				numVowelConsSeqs += 1
+		vowelConsSeqRatio = numVowelConsSeqs*1.0/(wordLength-1)
+		features.append(('vowelConsSeqRatio_inWord', vowelConsSeqRatio))
+		return features
+
+	def wordContextFeatures(self, csp, action, assignment):
+		features = []
+		wordLength = action.length
+		startRow = action.startLoc[0]
+		startCol = action.startLoc[1]
+
+		###--- Sequence ratios w/ context ---#
+		# Vowel-Consonant ratio
+		numVowelConsSeqs = 0
+		totalSeqs = 0
+		# for each letter in the word
+		for idx in range(wordLength):
+			# find the current letter's possible neighbors
+			curLetterKey = None
+			nbrKey1 = None
+			nbrKey2 = None
+			if action.across:
+				curLetterKey = str((startRow, startCol+idx))
+				nbrKey1 = str((startRow-1, startCol+idx))
+				nbrKey2 = str((startRow+1, startCol+idx))
+			else:
+				curLetterKey = str((startRow+idx, startCol))
+				nbrKey1 = str((startRow+idx, startCol-1))
+				nbrKey2 = str((startRow+idx, startCol+1))
+			# if the neighbors are valid, assigned Letter variables, check for feature
+			if nbrKey1 in csp.variables:
+				if len(csp.values[nbrKey1]) == 1:
+					nbrVal = csp.values[nbrKey1]
+					bool1 = assignment[idx] in VOWEL and nbrVal not in VOWEL
+					bool2 = assignment[idx] not in VOWEL and nbrVal in VOWEL
+					if bool1 or bool2:
+						numVowelConsSeqs += 1
+					totalSeqs += 1
+			if nbrKey2 in csp.variables:
+				if len(csp.values[nbrKey2]) == 1:
+					nbrVal = csp.values[nbrKey2]
+					bool1 = assignment[idx] in VOWEL and nbrVal not in VOWEL
+					bool2 = assignment[idx] not in VOWEL and nbrVal in VOWEL
+					if bool1 or bool2:
+						numVowelConsSeqs += 1
+					totalSeqs += 1
+		vowelConsSeqRatio = 1
+		if totalSeqs > 0:
+			vowelConsSeqRatio = numVowelConsSeqs*1.0/totalSeqs
+		features.append(('vowelConsSeqRatio_inContext', vowelConsSeqRatio))
+
+		# Common 2-consonant sequences
+		numCommonConsSeqs = 0
+		totalSeqs = 0
+		# for each letter in the word
+		for idx in range(wordLength):
+			# find the current letter's possible neighbors
+			curLetterKey = None
+			nbrKey1 = None
+			nbrKey2 = None
+			if action.across:
+				curLetterKey = str((startRow, startCol+idx))
+				nbrKey1 = str((startRow-1, startCol+idx))
+				nbrKey2 = str((startRow+1, startCol+idx))
+			else:
+				curLetterKey = str((startRow+idx, startCol))
+				nbrKey1 = str((startRow+idx, startCol-1))
+				nbrKey2 = str((startRow+idx, startCol+1))
+			# if the neighbors are valid, assigned Letter variables, check for feature
+			if nbrKey1 in csp.variables:
+				if len(csp.values[nbrKey1]) == 1:
+					nbrVal = csp.values[nbrKey1]
+					if nbrVal not in VOWEL and assignment[idx] not in VOWEL:
+						totalSeqs += 1
+						if nbrVal + assignment[idx] in CONSONANT_CLUSTERS:
+							numCommonConsSeqs += 1
+			if nbrKey2 in csp.variables:
+				if len(csp.values[nbrKey2]) == 1:
+					nbrVal = csp.values[nbrKey2]
+					if nbrVal not in VOWEL and assignment[idx] not in VOWEL:
+						totalSeqs += 1
+						if assignment[idx] + nbrVal in CONSONANT_CLUSTERS:
+							numCommonConsSeqs += 1
+		commonConsSeqRatio = 1
+		if totalSeqs > 0:
+			commonConsSeqRatio = numCommonConsSeqs*1.0/totalSeqs
+		features.append(('commonConsSeqRatio_inContext', commonConsSeqRatio))
 
 		return features
 

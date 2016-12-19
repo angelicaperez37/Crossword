@@ -215,6 +215,10 @@ def assignLetter(cw, letter, assignment):
 def addAssignmentsToGrid(cw, assignments):
 	for key in assignments.keys():
 		keyTup = make_tuple(key)
+
+		#print 'In util.py, addAssignmentsToGrid'
+		#print 'keyTup: ' + key
+
 		if len(keyTup) == 2:
 			assignLetter(cw, cw.letters[keyTup], assignments[key])
 		else:
@@ -260,7 +264,6 @@ def chooseSeedWord(csp, key):
 	assignWord(csp, word, word.domain[0])
 	propogateWordAssignment(csp, word)
 
-#TODO: Generalize
 def addSeedWords(cw):
 	acrossWord = cw.words[(2,0,1)]
 	random.shuffle(acrossWord.domain)

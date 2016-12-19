@@ -16,7 +16,7 @@ start = timeit.default_timer()
 #Globals
 cwSize = 9
 numFeatures = 70
-dataFileName = 'testingMidiResults_trial5.txt'
+dataFileName = 'temp_testingMidiResults_trial5.txt'
 #weightFileName = 'weights_midi_trial1.txt'
 
 # Process Database
@@ -38,7 +38,6 @@ for line in open('weights_midi_trial5_delta_weight_scores_500iter.txt'):
 # Create Crossword Object
 #cw = createCrossword(size=5, sortedData=sortedData, blanks=grid)
 
-QLA = QLearningAlgorithm(numFeatures)
 iters = 100
 numSolved = 0
 temp = datetime.now()
